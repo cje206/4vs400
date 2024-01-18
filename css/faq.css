@@ -1,61 +1,99 @@
-body {
-    margin-right: 20px;
-    margin-left: 20px
-}
+
 .container {
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    margin-right: 20px;
+    margin-left: 20px; 
 }
-
+/* 아코디언  */
 input[id*="answer"] {
     display:none;
 }
 input[id*="answer"] + label {
-    display:block;
-    padding:15px;
-    border: 1px solid;
-    border-top:0;
-    border-right: 0;
-    border-left: 0;
-    font-weight: 500;
-    cursor:pointer;
-    position: relative;
+   display: block;
+   padding: 10px;
+   border: 1px solid;
+   border: bottom 100px;
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   font-weight: 900;
+   margin-top: 20px;
+   position:relative;
 }
+/* 아코디언 화살표 */
 input[id*="answer"] + label em {
+    transform: rotate(180deg);
     position:absolute;
-    top:25px;
+    top:50%;
     right:10px;
     width:30px;
     height: 30px;
     margin-top: -15px;
     display: inline-block;
-    background:url('/sub/angle-small-down.png') 0 0 no-repeat;
+    background:url('/img/angle-small-down.png') 0 0 no-repeat;
     background-size: cover;
 }
+
+
 input[id*="answer"] + label + div {
     max-height: 0;
     transition: all .35s;
-    overflow:hidden;
+    overflow: hidden;
     font-size: 11px;
+    max-height: 300px;
 }
-input[id*="answer"]:checked + label + div {max-height: 100px;}
+input[id*="answer"] + label + div p {
+    display: inline-block;
+    padding: 20px;
+}
+
+input[id*="answer"]:checked + label + div {max-height: 0;}
+input[id*="answer"]:checked + label em {background-position: 0 -30px;}
 
 
+
+/* 메뉴바 9개 */
 .search {
     position: relative;
-    width: 400px;
-    margin: 10px;
+    width: 95%;
+    margin: 20px;
+    margin-top: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 input {
     width: 100%;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 8px;
     padding: 5px 12px;
     font-size: 14px;
     box-sizing: border-box;
-    
 }
+
+/* 페이지 번호 */
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.page_button {
+    background-color: gray;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+   
+}
+
+/* 
 img {
     position : absolute;
     width: 17px;
@@ -64,4 +102,4 @@ img {
     margin: 0;
     left: 370px;
     cursor: pointer;
-}
+} */

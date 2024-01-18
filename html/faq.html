@@ -5,85 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>알라딘</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="faq.css">
+  <link rel="stylesheet" href="../css/faq.css">
 </head>
 <body>
-  <h1>FAQ.</h1>
-  <div class="search">
-    <input type="text" placeholder="질문 키워드를 검색해보세요">
-    <img src="/sub/search.png" alt="Search Icon">
-  </div>
-  <div class="container">
-    <button type="button" onclick="location.href=''">전체보기</button>
-    <button type="button" onclick="location.href=''">주문</button>
-    <button type="button" onclick="location.href=''">주문</button>
-    <button type="button" onclick="location.href=''">상품정보</button>
-    <button type="button" onclick="location.href=''">배송</button>
-    <button type="button" onclick="location.href=''">결제</button>
-    <button type="button" onclick="location.href=''">반품/교환</button>
-    <button type="button" onclick="location.href=''">회원</button>
-    <button type="button" onclick="location.href=''">사이트/시스템</button>
-  </div>
-  <div class="accordion">
-    <input type="checkbox" id="answer01">
-  <label for="answer01">Q. 제목<em></em></label>
-    <div>
-      <p></p>
+  <body>
+    <!--검색창 -->
+    <div class="search">
+      <input type="text" placeholder="질문 키워드를 검색해보세요">
+      <!-- <img src="/img/" alt="Search Icon"> 검색창 이미지-->
     </div>
-      <input type="checkbox" id="answer02">
-    <label for="answer02">Q. 제목<em></em></label>
-    <div>
-      <p></p>
+    <!--메뉴창-->
+    <div class="container">
+      <button type="button_menu" onclick="location.href=''">전체보기</button>
+      <button type="button_menu" onclick="location.href=''">주문</button>
+      <button type="button_menu" onclick="location.href=''">주문</button>
+      <button type="button_menu" onclick="location.href=''">상품정보</button>
+      <button type="button_menu" onclick="location.href=''">배송</button>
+      <button type="button_menu" onclick="location.href=''">결제</button>
+      <button type="button_menu" onclick="location.href=''">반품/교환</button>
+      <button type="button_menu" onclick="location.href=''">회원</button>
+      <button type="button_menu" onclick="location.href=''">사이트/시스템</button>
     </div>
-    <input type="checkbox" id="answer03">
-    <label for="answer03">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
+    <!--Q&A-->
+    <div class="accordion">
+      <input type="checkbox" id="answer01">
+    <label for="answer01">Q. 주문하기 누르니, "페이지를 연결할 수 없다"는 메세지가 나오네요.<em></em></label>
+      <div>
+        <p><주문하기>화면이나 <나의계정> 페이지는 보안설정이 된 영역이어서, <br />
+          사용하시는 컴퓨터의 브라우저에 <프록시>가 설정되어 있으면 연결이 되지 않습니다.
+          <br />
+          오류가 나는 경우, 대부분이 이 프록시 설정 때문인데,우선 아래 방법으로 점검해 보시길 바랍니다.
+          <br />
+          웹 브라우저의 <도구> => 인터넷옵션 => 연결 => LAN설정으로 들어가,<br /><프록시서버>사용에 체크가 되어 있는지 확인해 주세요.<br />
+          체크가 되어 있다면 해제하여 <확인>을 누르신 후 다시 주문하기를 눌러보시면 됩니다.<br /></p>
+      </div>
+        <input type="checkbox" id="answer02">
+      <label for="answer02">Q. 제목<em></em></label>
+      <div>
+        <p></p>
+      </div>
+      <input type="checkbox" id="answer03">
+      <label for="answer03">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer04">
+      <label for="answer04">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer05">
+      <label for="answer05">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer06">
+      <label for="answer06">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer07">
+      <label for="answer07">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer08">
+      <label for="answer08">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer09">
+      <label for="answer09">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
+      <input type="checkbox" id="answer10">
+      <label for="answer10">Q. 제목<em></em></label>
+      <div>
+        <p> </p>
+      </div>
     </div>
-    <input type="checkbox" id="answer04">
-    <label for="answer04">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
+    <!--페이지-->
+    <div class="page">
+      <button class="page_button" onclick="location.href='index.html'">1</button >
+      <button class="page_button" onclick="location.href='index.html'">2</button >
+      <button class="page_button" onclick="location.href='index.html'">3</button >
+      <button class="page_button" onclick="location.href='index.html'">4</button >
     </div>
-    <input type="checkbox" id="answer05">
-    <label for="answer05">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
-    </div>
-    <input type="checkbox" id="answer06">
-    <label for="answer06">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
-    </div>
-    <input type="checkbox" id="answer07">
-    <label for="answer07">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
-    </div>
-    <input type="checkbox" id="answer08">
-    <label for="answer08">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
-    </div>
-    <input type="checkbox" id="answer09">
-    <label for="answer09">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
-    </div>
-    <input type="checkbox" id="answer10">
-    <label for="answer10">Q. 제목<em></em></label>
-    <div>
-      <p> </p>
-    </div>
-  </div>
-  <div class="page">
-    <button onclick="location.href='index.html'">1</button >
-    <button onclick="location.href='index.html'">2</button >
-    <button onclick="location.href='index.html'">3</button >
-    <button onclick="location.href='index.html'">4</button >
-
-    
-  </div>
 
 </body>
 </html>
