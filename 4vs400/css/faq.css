@@ -1,0 +1,67 @@
+body {
+    margin-right: 20px;
+    margin-left: 20px
+}
+.container {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+input[id*="answer"] {
+    display:none;
+}
+input[id*="answer"] + label {
+    display:block;
+    padding:15px;
+    border: 1px solid;
+    border-top:0;
+    border-right: 0;
+    border-left: 0;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+}
+input[id*="answer"] + label em {
+    position:absolute;
+    top:25px;
+    right:10px;
+    width:30px;
+    height: 30px;
+    margin-top: -15px;
+    display: inline-block;
+    background:url('/sub/angle-small-down.png') 0 0 no-repeat;
+    background-size: cover;
+}
+input[id*="answer"] + label + div {
+    max-height: 0;
+    transition: all .35s;
+    overflow:hidden;
+    font-size: 11px;
+}
+input[id*="answer"]:checked + label + div {max-height: 100px;}
+
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 10px;
+}
+input {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    
+}
+img {
+    position : absolute;
+    width: 17px;
+    top: 9px;
+    right: 5px;
+    margin: 0;
+    left: 370px;
+    cursor: pointer;
+}
