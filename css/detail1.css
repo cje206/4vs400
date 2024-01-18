@@ -1,13 +1,11 @@
-body {
+/* 도서 이미지 영역 */
+.main {
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
 }
-
-.main {
-    margin-top: 20px;
-}
-
-.category {
+/* 도서 상품 안내 영역 */
+.main_category {
     display: inline-block;
     background: #d9d9d9;
     text-align: center;
@@ -19,7 +17,7 @@ body {
     margin-bottom: 5px;
 }
 
-.title {
+.main_title {
     margin-bottom: 5px;
     color: #333333;
     font-size: 14px;
@@ -32,6 +30,7 @@ p {
     font-size: 10px;
 }
 
+/* 가격 안내 영역 */
 .price {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -57,6 +56,11 @@ p {
     color: #333333;
     font-size: 12px;
     font-weight: bold;
+}
+/* 마일리지, 배송 안내 영역 */
+.info {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 li div {
@@ -90,6 +94,13 @@ li div {
     color: #333333;
 }
 
+/* 별점 및 리뷰 안내 영역 */
+
+.review_list {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .score {
     font-size: 12px;
     color: #cacaca;
@@ -102,10 +113,64 @@ span {
 button {
     width: 300px;
     height: 30px;
-    margin: 10px;
+    margin: 10px 20px;
     font-size: 12px;
     background-color: white;
     color: #333333;
     border-radius: 10px;
     border: 1px solid #cacaca;
+}
+
+button.clicked {
+    background-color: #9e9e9e;
+}
+
+/* 오늘의 추천 영역 */
+.today_recommend {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.today_title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.recommend_move_item {
+    display: flex;
+    float: left;
+    margin-right: 20px;
+}
+
+.move-category {
+    display: inline-block;
+    background: #d9d9d9;
+    text-align: center;
+    font-size: 8px;
+    color: #333333;
+    border-radius: 12px;
+    padding: 1px 7px 2px 7px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.move_title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.recommend_move_info {
+    font-size: 10px;
+    width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.move_score {
+    font-size: 10px;
+    color: #cacaca;
 }
