@@ -1,6 +1,13 @@
+.doriban {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 10px;
+}
 .doriban > span {
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 20px;
 }
 .basic {
     margin-top: 10px;
