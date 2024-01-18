@@ -39,8 +39,7 @@ function scrollToElement(selector) {
 function handleScroll() {
     const scrollPosition = window.scrollY;
     const basicOffset = document.querySelector('.basic').offsetTop - document.querySelector('.doriban').offsetHeight;
-    const reviewOffset =
-        document.querySelector('.reviewhead').offsetTop - document.querySelector('.doriban').offsetHeight;
+    const reviewOffset = document.querySelector('.review').offsetTop - document.querySelector('.doriban').offsetHeight;
     const returnOffset =
         document.querySelector('.returntitle').offsetTop - document.querySelector('.doriban').offsetHeight;
 

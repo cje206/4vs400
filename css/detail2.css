@@ -4,11 +4,15 @@
     background-color: white;
     z-index: 100;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
 }
 .doriban > span {
     margin-left: 20px;
     font-size: 20px;
+    cursor: pointer;
 }
 .basic {
     margin-top: 10px;
