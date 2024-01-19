@@ -79,11 +79,11 @@
     margin-left: 20px;
     font-size: 17px;
 }
-.reviewhead {
+.container {
     display: flex;
     justify-content: space-between;
 }
-.reviewhead > .star {
+.container > .star {
     margin-top: 20px;
     margin-right: 20px;
 }
@@ -133,6 +133,13 @@
     padding-bottom: 20px;
 }
 .review5content > p {
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.hidden {
+    display: none;
+}
+.hidden > p {
     margin-left: 20px;
     padding-bottom: 20px;
 }

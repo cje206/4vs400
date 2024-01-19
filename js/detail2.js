@@ -75,3 +75,72 @@ function setActiveButton(index) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function () {
+    // 각 버튼에 대한 클릭 이벤트 리스너 추가
+    document.querySelectorAll('.reviewbtn button').forEach(function (button, index) {
+        button.addEventListener('click', function () {
+            toggleReviewContent(index + 1);
+        });
+    });
+});
+
+function toggleReview1() {
+    var hiddenSpan = document.querySelector('.reviewcontent .hidden1');
+    var btnText = document.querySelector('.btn1');
+    var review1head = document.getElementById('review1head');
+
+    if (hiddenSpan.style.display === 'none' || hiddenSpan.style.display === '') {
+        hiddenSpan.style.display = 'inline'; // Change 'inline' to 'block' if needed
+        btnText.innerHTML = '접기 -';
+    } else {
+        hiddenSpan.style.display = 'none';
+        btnText.innerHTML = '더보기 +';
+        // Scroll to review1head
+        review1head.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+function toggleReview2() {
+    var hiddenSpan = document.querySelector('.reviewcontent .hidden2');
+    var btnText = document.querySelector('.btn2');
+    var review2head = document.getElementById('review2head');
+
+    if (hiddenSpan.style.display === 'none' || hiddenSpan.style.display === '') {
+        hiddenSpan.style.display = 'inline'; // Change 'inline' to 'block' if needed
+        btnText.innerHTML = '접기 -';
+    } else {
+        hiddenSpan.style.display = 'none';
+        btnText.innerHTML = '더보기 +';
+        // Scroll to review2head
+        review2head.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+function toggleReview3() {
+    var hiddenSpan = document.querySelector('.reviewcontent .hidden3');
+    var btnText = document.querySelector('.btn3');
+    var review3head = document.getElementById('review3head');
+
+    if (hiddenSpan.style.display === 'none' || hiddenSpan.style.display === '') {
+        hiddenSpan.style.display = 'inline'; // Change 'inline' to 'block' if needed
+        btnText.innerHTML = '접기 -';
+    } else {
+        hiddenSpan.style.display = 'none';
+        btnText.innerHTML = '더보기 +';
+        // Scroll to review3head
+        review3head.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+function toggleReview4() {
+    var hiddenSpan = document.querySelector('.reviewcontent .hidden4');
+    var btnText = document.querySelector('.btn4');
+    var review4head = document.getElementById('review4head');
+
+    if (hiddenSpan.style.display === 'none' || hiddenSpan.style.display === '') {
+        hiddenSpan.style.display = 'inline'; // Change 'inline' to 'block' if needed
+        btnText.innerHTML = '접기 -';
+    } else {
+        hiddenSpan.style.display = 'none';
+        btnText.innerHTML = '더보기 +';
+        // Scroll to review3head
+        review4head.scrollIntoView({ behavior: 'smooth' });
+    }
+}
