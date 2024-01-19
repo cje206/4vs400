@@ -1,0 +1,121 @@
+.faqQst {
+    margin:0 20px 20px;
+    position: relative;
+}
+.faqSearch {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding-left: 10px;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    
+}
+.faqSearchBtn {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    background:url('/img/search.png') 0 0 no-repeat;
+    background-size: contain;
+    background-position: right;
+    border: none;
+    background-color: transparent; 
+
+}
+.faqMenuBox {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin:0 20px 20px;
+
+}
+.faqMenu{
+    line-height: 40px;
+    height: 40px;
+    width: 33.3%;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+
+}
+.faqMenu.active {
+    background-color: #ddd;
+}
+.faqQnaBox {
+    margin-bottom: 20px;
+}
+.faqQ {
+    padding: 15px 20px 15px 40px;
+    border-bottom: 1px solid #ddd;
+    text-indent: -20px;
+}
+.qst {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1d45d4;
+}
+.faqA {
+    padding: 15px 20px 15px 40px;
+    border-bottom: 1px solid #ddd;
+    text-indent: -20px;
+    background-color: #ddd;
+    display: none;
+}
+.ans {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1d45d4;
+}
+
+/* 아코디언 */
+.faqQnaBox .faqA {
+    display: none;
+}
+
+.faqQnaBox .faqQ.active + .faqA {
+    display: block;
+}
+.faqQnaBox .faqQ {
+    cursor: pointer;
+}
+.faqQnaBox .faqQ:hover {
+    background-color: #ddd;
+  }
+  
+  .faqQnaBox .faqQ.active {
+    font-weight: bold;
+  }
+  .faqQnaBox .faqA {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  /* 아코디언  */
+
+
+
+.faqPagerBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.faqPager {
+    margin: 0 7px;
+    width: 20px;
+    height: 20px;
+    /* line-height: 20px; */
+    font-size: 12px;
+    color: #777;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.faqPager.active {
+    border: none;
+    background-color: #333;
+    color: #fff;
+
+}
