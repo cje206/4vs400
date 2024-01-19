@@ -68,6 +68,70 @@ li div {
 
 .list_tilte {
     position: absolute;
+    z-index: 1;
+}
+
+.btn_open {
+    position: absolute;
+    bottom: -45px;
+    right: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+.wrap {
+    padding: 10px;
+}
+
+.pop_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 2;
+}
+.pop_wrap:after {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+    z-index: 2;
+}
+
+h4 {
+    text-align: center;
+}
+
+.pop_wrap .pop_inner {
+    display: inline-block;
+    padding: 20px 30px;
+    background: #fff;
+    width: 240px;
+    vertical-align: middle;
+    text-align: justify;
+}
+
+.info_mil li {
+    list-style: disc;
+    font-size: 12px;
+    margin: 5px 5px;
+    width: auto;
+}
+
+.btn_close {
+    width: 180px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #f21c8c;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .list_content {
@@ -111,14 +175,15 @@ span {
 
 .button {
     text-align: center;
+    margin: 15px;
 }
 
 button {
     width: 280px;
     height: 30px;
-    margin: 10px;
+    /* margin: 10px; */
     font-size: 12px;
-    background-color: white;
+    background-color: #ffffff;
     color: #333333;
     border-radius: 10px;
     border: 1px solid #cacaca;
