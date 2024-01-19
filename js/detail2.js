@@ -68,8 +68,10 @@ function setActiveButton(index) {
     buttons.forEach((button, i) => {
         if (i + 1 === index) {
             button.style.color = 'blue'; // 활성화된 버튼의 색상을 변경
+            button.style.borderBottom = '2px solid blue';
         } else {
             button.style.color = 'black'; // 비활성화된 버튼의 색상을 변경
+            button.style.borderBottom = '2px solid transparent';
         }
     });
 }
