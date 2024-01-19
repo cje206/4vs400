@@ -1,11 +1,14 @@
 .hide{display: none;}
 .tb{font-weight: 700;}
 .pc{display: none;}
+.bookCat{display: inline-block; font-size: 10px; background-color: #C8EBFB; padding: 2px 8px; border-radius: 6px; margin-bottom: 6px;}
+.bookTit{font-weight: 700; margin-bottom: 6px;}
+.bookText{font-size: 12px;}
 
 
 /* header */
-header {width: 100%; height: 60px; display: flex; position: fixed; justify-content: space-between; align-items: center; top: 0; left: 0; border-bottom: 1px solid #eee; background: #fff;}
-.hLogo{width: 60px; height: 100%; padding: 15px 10px; background: #fff; z-index: 999;}
+header {width: 100%; height: 60px; display: flex; position: fixed; justify-content: space-between; align-items: center; top: 0; left: 0; border-bottom: 1px solid #eee; background: #fff; z-index: 999;}
+.hLogo{width: 60px; height: 100%; padding: 15px 10px; background: #fff;}
 .hLogo img{width: 40px; height: auto;}
 
 .hIcons{display: flex;}
@@ -15,7 +18,7 @@ header {width: 100%; height: 60px; display: flex; position: fixed; justify-conte
 .hSearch input{border: none; background: #eee; width: 100%; height: 40px; line-height: 40px; border-radius: 20px;padding: 0 15px;}
 .hSearchIcon{position: absolute; top: 50%; right: 10px; transform: translateY(-40%);}
 
-.moMenuBox{position: fixed; top: 60px; bottom: 0; right: 0; left: 0; width: 100%;overflow-y: auto; z-index: 1000; background: #fff; z-index: 999;}
+.moMenuBox{position: fixed; top: 60px; bottom: 0; left: -100%; width: 100%;overflow-y: auto; z-index: 1000; background: #fff; z-index: 999;}
 .moLogin{height: 70px; margin: 20px; background: #eee; border-radius: 10px; line-height: 70px; padding-left: 20px;}
 
 .moMenuBtn{display: flex; justify-content: space-evenly; margin: 0 20px 20px 20px;}
@@ -23,36 +26,48 @@ header {width: 100%; height: 60px; display: flex; position: fixed; justify-conte
 .moBtnText{font-size: 12px; text-align: center;}
 
 .mmlCategory{width: 100%; height: 50px; line-height: 50px; background: #eee;padding: 0 20px; font-weight: 700; border-bottom: 1px solid #ddd;}
+.mmlList{display: none;}
 .mmlSub{width: 100%; height: 40px; line-height: 40px; border-bottom: 1px solid #eee; padding: 0 20px;}
 
 
 /* container */
 .container{padding: 60px 0;}
 .conTit{font-weight: 700; padding: 20px 20px 10px;}
+.discount{font-size: 12px; color: #E70909; font-weight: 700;}
+.op{text-decoration: line-through; font-size: 8px; color: #bbb;}
+.fp{font-size: 12px; font-weight: 700;}
 
 /* slide */
-.slide{position: relative; margin-bottom: 20px;}
+.slide{position: relative; margin-bottom: 20px; width: 100%; overflow: hidden;}
+.slideBox{position: relative; display: flex; width: 400%;}
 .slideImg{width: 100%;}
 .slideImg img{width: 100%;}
 
 .slidePager{position: absolute; bottom: 10px; right: 20px; display: flex; justify-content: center; text-indent: -9999px; width: 50px; height: 20px; background-color: rgba(0,0,0,0.5); border-radius: 10px;}
+.moPagerNum{text-indent: 0; width: 100%; height: 100%; line-height: 20px; text-align: center; color: #fff;}
 .slidePager p{width: 10px; height: 10px; background-color: #eee; border-radius: 5px; margin: 0 10px; display: none;}
 .slidePager p.pagerActive{background-color: #777;}
 
 /* tab */
 .tab{margin: 0 20px 20px 20px;}
-.tabBtnBox{position: relative; overflow-x: auto; width: 100%; height: 32px; margin-bottom: 20px;}
+.tabBtnBox{position: relative; overflow-x: auto; width: 100%; height: 32px; margin-bottom: 20px;-ms-overflow-style: none;}
+.tabBtnBox::-webkit-scrollbar{display:none;}
 .tabMenu{position: absolute; top: 0; left: 0; width: fit-content; display: flex; word-break: keep-all;}
 .tabBtn{display: inline-block; height: 30px; padding: 0 15px; line-height: 30px; background-color: #eee; margin-right: 10px; border-radius: 15px;}
 .tabBtn.active{background-color: #fff; border: 1px solid #999; font-weight: 500;}
 .tabBtn:last-child{margin-right: 0;}
 
-.tabContBox{text-align: center; margin-bottom: 20px;}
+.tabImgBox{width: 100%; overflow-x: auto; position: relative;}
+
+.tabContImgs{position: relative; display: flex; align-items: center; width: fit-content;}
+.tabContentImg{width: 100px; margin-right: 10px;}
+.tabContentImg.active{width: 130px;}
+.tabContentImg img{width: 100%; height: auto;}
+
+.tabContBox{text-align: center; margin-bottom: 20px; display: none;}
+.tabContBox.active{display: block;}
 .tabContBox.active .tabContentImg{width: 130px; margin: 0 auto; margin-bottom: 10px;}
-.tabContBox.active .tabContentImg img{width: 100%; height: auto;}
-.tabContentCat{display: inline-block; font-size: 10px; background-color: #C8EBFB; padding: 4px 8px; border-radius: 4px; margin-bottom: 6px;}
-.tabContentTit{font-weight: 700; margin-bottom: 6px;}
-.tabContentText{font-size: 12px;}
+.tabContBox.active .bookCat{display: inline-block;}
 
 /* best */
 .best{background-color: #f3f3f3; padding-bottom: 20px;}
@@ -71,9 +86,8 @@ header {width: 100%; height: 60px; display: flex; position: fixed; justify-conte
 .bestImgMo img{width: 100%; height: auto;}
 .bestDetail{width: 100%;}
 .bestAut{font-size: 10px; color: #999;}
-.bestPrice .discount{font-size: 12px; color: #ea1111; font-weight: 700; margin-right: 20px;}
-.bestPrice .op{text-decoration: line-through; color: #bbb; font-size: 8px; margin-right: 6px;}
-.bestPrice .fp{font-size: 12px; font-weight: 700;}
+.bestPrice .discount{margin-right: 20px;}
+.bestPrice .op{margin-right: 6px;}
 .bestText{font-size: 12px;}
 .bestMore{font-size: 12px; font-weight: 500; text-align: center; margin-top: 10px;}
 
@@ -98,17 +112,29 @@ header {width: 100%; height: 60px; display: flex; position: fixed; justify-conte
 .giftSlide{width: 100%; height: 135px; background-color: #162CA1; margin-bottom: 15px;}
 .giftAll{text-align: center;}
 
+/* price */
+.priCont{display: flex;justify-content: space-between; margin: 0 20px 25px;}
+.priContBox{width: 30%;}
+.priContentImg{position: relative; width:100%; margin-bottom: 10px;}
+.priNum{position: absolute; top: 6px; left: 6px; height: 15px; width: 15px; height: 15px; font-size: 10px; text-align: center; background: rgba(0,0,0,0.5); color: #fff; font-weight: 700; border-radius: 50%;}
+.priContentImg img{width: 100%; height: 100%; object-fit: cover;}
+.priContentCat{display: inline-block; font-size: 10px; background-color: #C8EBFB; padding: 4px 8px; border-radius: 4px; margin-bottom: 6px;}
+.priContentTit{font-weight: 700; margin-bottom: 6px; text-align: right;}
+.priPrice .discount{display: inline-block; width: 50%;}
+.priPrice .op{display: inline-block; width: 50%; text-align: right;}
+.priPrice .fp{display: block; text-align: right;}
+.priMore{width: fit-content; margin: 0 auto; text-align: center; height: 30px; border-radius: 15px; font-size: 10px; font-weight: 500; line-height: 30px; padding: 0 15px; border: 1px solid #ddd;}
 
 
 
 /* footer */
 footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
 .flogo{margin-bottom: 10px; font-weight: 500;}
-.fText{margin: 0 20px 10px 20px;}
+.fText{margin: 0 20px 10px 20px; display: none;}
 .fText span{font-size: 10px; color: #666; display: inline-block;}
 .fText span:after{content: ""; display: inline-block; width: 1px; height: 8px; background: #999; margin: 0 6px;}
-.fMenu{margin: 0 16px 10px 16px; display: flex; flex-wrap: wrap; justify-content: center;}
-.fMenu p{color: #999; margin: 4px; font-size: 10px;}
+.fMenu{margin: 0 16px 10px 16px; display: flex; flex-wrap: wrap; justify-content: center; display: none;}
+.fMenu p{color: #999; margin: 4px; font-size: 10px; display: inline-block;}
 .fMenu p.tcbl{color: #555; font-weight: 500;}
 .fCopy{color: #bbb; font-size: 10px; padding-bottom: 15px; border-bottom: 1px solid #ddd; margin-bottom: 15px;}
 .fTel{margin-bottom: 15px; font-weight: 500;}
@@ -117,3 +143,8 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
 .fBtn{width: 135px; height: 40px; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 5px 0 5px 40px; font-size: 10px; word-break: keep-all; text-align: left; background: url();}
 .fBtn.escrow{margin-right: 10px; background: #fff url('https://image.aladin.co.kr/img/footer/footer_escrow.jpg') no-repeat center left 10px / 24px 24px;}
 .fBtn.isms{margin-right: 10px; background: #fff url('https://image.aladin.co.kr/img/footer/footer_isms.jpg') no-repeat center left 10px / 24px 24px;}
+
+
+
+/* pc */
+@me

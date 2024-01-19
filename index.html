@@ -9,269 +9,337 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+  <header>
+    <a href="index.html" class="hLogo"><img src="./img/logo.png" alt="알라딘 로고" /></a>
+    <div class="hSearch">
+      <input type="text" placeholder="검색어를 입력하세요." />
+      <div class="hSearchIcon"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
+    </div>
+    <div class="hIcons">
+      <a href="#" class="goCart hIcon"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></a>
+      <div class="moMenuOpen hIcon"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></div>
+      <div class="moMenuClose hIcon hide"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></div>
+    </div>
+    
+  </header>
+  <div class="moMenuBox">
+    <div class="moLogin">로그인&#47;회원가입</div>
+    <div class="moMenuBtn">
+      <div class="moMyPage moBtn">
+        <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></div>
+        <div class="moBtnText">마이페이지</div>
+      </div>
+      <div class="moOrder moBtn">
+        <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 640 512"><path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/></svg></div>
+        <div class="moBtnText">주문&#47;배송</div>
+      </div>
+      <div class="moHeart moBtn">
+        <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></div>
+        <div class="moBtnText">보관함</div>
+      </div>
+      <div class="moService moBtn">
+        <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/></svg></div>
+        <div class="moBtnText">고객센터</div>
+      </div>
+    </div>
+    <div class="moMenuList">
+      <div class="mmlBox">
+        <div class="mmlCategory">국내도서</div>
+        <div class="mmlList">
+          <div class="mmlSub">건강&#47;취미</div>
+          <div class="mmlSub">경제경영</div>
+          <div class="mmlSub">과학</div>
+          <div class="mmlSub">교재</div>
+          <div class="mmlSub">사회</div>
+          <div class="mmlSub">소설&#47;시&#47;희곡</div>
+          <div class="mmlSub">수험서&#47;자격증</div>
+          <div class="mmlSub">어린이</div>
+          <div class="mmlSub">에세이&#47;시</div>
+          <div class="mmlSub">여행</div>
+          <div class="mmlSub">역사</div>
+          <div class="mmlSub">요리</div>
+          <div class="mmlSub">자기계발</div>
+          <div class="mmlSub">장르소설</div>
+          <div class="mmlSub">전집</div>
+          <div class="mmlSub">종교&#47;역학</div>
+          <div class="mmlSub">청소년</div>
+          <div class="mmlSub">참고서</div>
+          <div class="mmlSub">컴퓨터&#47;모바일</div>
+          <div class="mmlSub">베스트셀러</div>
+          <div class="mmlSub">이벤트</div>
+          <div class="mmlSub">기타</div>
+        </div>
+      </div>
+      <div class="mmlBox">
+        <div class="mmlCategory">외국도서</div>
+        <div class="mmlList">
+          <div class="mmlSub">건강&#47;취미</div>
+          <div class="mmlSub">경제경영</div>
+          <div class="mmlSub">과학</div>
+          <div class="mmlSub">교재</div>
+          <div class="mmlSub">사회</div>
+        </div>
+      </div>
+      <div class="mmlBox">
+        <div class="mmlCategory">eBook</div>
+        <div class="mmlList">
+          <div class="mmlSub">건강&#47;취미</div>
+          <div class="mmlSub">경제경영</div>
+          <div class="mmlSub">과학</div>
+          <div class="mmlSub">교재</div>
+          <div class="mmlSub">사회</div>
+        </div>
+      </div>
+      <div class="mmlBox">
+        <div class="mmlCategory">알라딘굿즈</div>
+        <div class="mmlList">
+          <div class="mmlSub">건강&#47;취미</div>
+          <div class="mmlSub">경제경영</div>
+          <div class="mmlSub">과학</div>
+          <div class="mmlSub">교재</div>
+          <div class="mmlSub">사회</div>
+        </div>
+      </div>
+      <div class="mmlBox">
+        <div class="mmlCategory">음반</div>
+        <div class="mmlList">
+          <div class="mmlSub">건강&#47;취미</div>
+          <div class="mmlSub">경제경영</div>
+          <div class="mmlSub">과학</div>
+          <div class="mmlSub">교재</div>
+          <div class="mmlSub">사회</div>
+        </div>
+      </div>
+      <div class="mmlBox">
+        <div class="mmlCategory">FAQ</div>
+        <div class="mmlList">
+          <div class="mmlSub">건강&#47;취미</div>
+          <div class="mmlSub">경제경영</div>
+          <div class="mmlSub">과학</div>
+          <div class="mmlSub">교재</div>
+          <div class="mmlSub">사회</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="slide">
+      <div class="slideBox">
+        <div class="slideImg"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240112_january1_layer.jpg" alt="슬라이드배너1" /></div>
+        <div class="slideImg"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240110_monthlybook_layer.jpg" alt="슬라이드배너2" /></div>
+        <div class="slideImg"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240116_essay_layer.jpg" alt="슬라이드배너3" /></div>
+        <div class="slideImg"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240104_ebs_layer.jpg" alt="슬라이드배너4" /></div>
+      </div>
+      <div class="slideAr"></div>
+      <div class="slidePager">
+        <div class="moPagerNum">1 / 4</div>
+        <p class="pagerActive">1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+      </div>
+    </div>
+    <div class="tab">
+      <div class="tabBtnBox">
+        <div class="tabMenu">
+          <div class="tabBtn menu1 active">추천도서</div>
+          <div class="tabBtn menu2">eBook</div>
+          <div class="tabBtn menu3">외국도서</div>
+          <div class="tabBtn menu4">알라딘굿즈</div>
+        </div>
+      </div>
+      <div class="tabCont">
+        <div class="tabImgBox">
+          <div class="tabContImgs">
+            <div class="tabContentImg active"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+            <div class="tabContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788988613665.jpg" alt="산책과 연애"></div>
+            <div class="tabContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791168101753.jpg" alt="산책과 연애"></div>
+            <div class="tabContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791162540947.jpg" alt="산책과 연애"></div>
+          </div>
+        </div>
+        <div class="tabContBox active">
+          <div class="bookCat">시/에세이</div>
+          <div class="bookTit">산책과 연애</div>
+          <div class="bookText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+        </div>
+        <div class="tabContBox">
+          <div class="bookCat">시/에세이</div>
+          <div class="bookTit">산책과 연애</div>
+          <div class="bookText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+        </div>
+        <div class="tabContBox">
+          <div class="bookCat">시/에세이</div>
+          <div class="bookTit">산책과 연애</div>
+          <div class="bookText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+        </div>
+        <div class="tabContBox">
+          <div class="bookCat">시/에세이</div>
+          <div class="bookTit">산책과 연애</div>
+          <div class="bookText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+        </div>
+      </div>
+    </div>
+    <div class="best">
+      <div class="conTit">실시간 Best</div>
+      <div class="bestList">
+        <div class="bestBox active">
+          <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="bestMain">
+            <p class="bestNum">01</p>
+            <p class="bestTit">산책과 연애</p>
+            <p class="bestRank">2</p>
+          </div>
+          <div class="bestInfo">
+            <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+            <div class="bestDetail">
+              <div class="bestAut">유진목 / 2020년 09월 15일</div>
+              <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+              <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+            </div>
+          </div>
+        </div>
+        <div class="bestBox">
+          <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="bestMain">
+            <p class="bestNum">02</p>
+            <p class="bestTit">책제목</p>
+            <p class="bestRank">2</p>
+          </div>
+          <div class="bestInfo">
+            <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+            <div class="bestDetail">
+              <div class="bestAut">유진목 / 2020년 09월 15일</div>
+              <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+              <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+            </div>
+          </div>
+        </div>
+        <div class="bestBox">
+          <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="bestMain">
+            <p class="bestNum">03</p>
+            <p class="bestTit">책제목</p>
+            <p class="bestRank">2</p>
+          </div>
+          <div class="bestInfo">
+            <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+            <div class="bestDetail">
+              <div class="bestAut">유진목 / 2020년 09월 15일</div>
+              <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+              <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+            </div>
+          </div>
+        </div>
+        <div class="bestBox">
+          <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="bestMain">
+            <p class="bestNum">04</p>
+            <p class="bestTit">책제목</p>
+            <p class="bestRank">2</p>
+          </div>
+          <div class="bestInfo">
+            <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+            <div class="bestDetail">
+              <div class="bestAut">유진목 / 2020년 09월 15일</div>
+              <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+              <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+            </div>
+          </div>
+        </div>
+        <div class="bestBox">
+          <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="bestMain">
+            <p class="bestNum">05</p>
+            <p class="bestTit">책제목</p>
+            <p class="bestRank">2</p>
+          </div>
+          <div class="bestInfo">
+            <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+            <div class="bestDetail">
+              <div class="bestAut">유진목 / 2020년 09월 15일</div>
+              <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+              <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
+            </div>
+          </div>
+        </div>
+        <div class="bestMore">더보기 +</div>
+      </div>
+    </div>
+    <div class="banner"></div>
+    <div class="recommend">
+      <div class="conTit">오늘의 추천</div>
+      <div class="recCont">
+        <div class="recContBox">
+          <div class="recContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="recContentCat">시/에세이</div>
+          <div class="recContentTit">산책과 연애</div>
+          <div class="recContentText">우리가 낮에 산책을 하는 이유가 나무 ...</div>
+        </div>
+        <div class="recContBox">
+          <div class="recContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="recContentCat">시/에세이</div>
+          <div class="recContentTit">산책과 연애</div>
+          <div class="recContentText">우리가 낮에 산책을 하는 이유가 나무 ...</div>
+        </div>
+      </div>
+      <div class="recMore">더보기 +</div>
+    </div>
+    <div class="gift">
+      <div class="conTit">알라딘 사은품</div>
+      <div class="giftSlide"></div>
+      <div class="giftAll">전체보기 +</div>
+    </div>
+    <div class="price">
+      <div class="conTit">이 주의 특가</div>
+      <div class="priCont">
+        <div class="priContBox">
+          <div class="priContentImg"><p class="priNum">1</p><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="priContentCat">시/에세이</div>
+          <div class="priContentTit">산책과 연애</div>
+          <div class="priPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+        </div>
+        <div class="priContBox">
+          <div class="priContentImg"><p class="priNum">2</p><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="priContentCat">시/에세이</div>
+          <div class="priContentTit">산책과 연애</div>
+          <div class="priPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+        </div>
+        <div class="priContBox">
+          <div class="priContentImg"><p class="priNum">3</p><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
+          <div class="priContentCat">시/에세이</div>
+          <div class="priContentTit">산책과 연애</div>
+          <div class="priPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
+        </div>
+      </div>
+      <div class="priMore">더 많은 상품 보러가기</div>
+    </div>
+  </div>
+  <footer>
+    <div class="flogo">&#40;주&#41;알라딘커뮤니케이션</div>
+    <div class="fText"><span>대표이사 최우경</span><span>고객정보보호 책임자 최우경</span><span>사업자등록 201-81-23094</span><span>통신판매업신고 중구01520호</span><span>이메일 privacy@aladin.co.kr</span><span>호스팅 제공자 알라딘커뮤니케이션</span><span>(본사) 서울시 중구 서소문로 89-31</span></div>
+    <div class="fMenu">
+      <p>회사소개</p>
+      <p>채용안내</p>
+      <p>이용약관</p>
+      <p class="tcbl">개인정보처리방침</p>
+      <p>중고매장</p>
+      <p>청소년 보호 정책</p>
+      <p>출판사&#183;공급사 안내</p>
+      <p>대량구매</p>
+      <p>제휴마케팅안내</p>
+      <p>광고 안내</p>
+    </div>
+    <div class="fCopy">&#169; Aladin Communication. All Rights Reserved.</div>
+    <div class="fTel">
+      <div class="ftTit">고객센터 1544-2514 &#40;발신자 부담&#41;</div>
+      <div class="ftText">평일 09:00~18:00 &#47; 일요일, 공휴일 휴무</div>
+    </div>
+    <div class="fBtns">
+      <div class="fBtn escrow">구매안전 에스크로 서비스 가입 확인</div>
+      <div class="fBtn isms">정보보호 관리체계 ISMS 인증획득</div>
+    </div>
+  </footer>
   <div id="wrap">
-    <header>
-      <a href="index.html" class="hLogo"><img src="./img/logo.png" alt="알라딘 로고" /></a>
-      <div class="hSearch">
-        <input type="text" placeholder="검색어를 입력하세요." />
-        <div class="hSearchIcon"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></div>
-      </div>
-      <div class="hIcons">
-        <a href="#" class="goCart hIcon"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg></a>
-        <div class="moMenuOpen hIcon"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></div>
-        <div class="moMenuClose hIcon hide"><svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></div>
-      </div>
-      
-    </header>
-    <div class="moMenuBox hide">
-      <div class="moLogin">로그인&#47;회원가입</div>
-      <div class="moMenuBtn">
-        <div class="moMyPage moBtn">
-          <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg></div>
-          <div class="moBtnText">마이페이지</div>
-        </div>
-        <div class="moOrder moBtn">
-          <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 640 512"><path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/></svg></div>
-          <div class="moBtnText">주문&#47;배송</div>
-        </div>
-        <div class="moHeart moBtn">
-          <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg></div>
-          <div class="moBtnText">보관함</div>
-        </div>
-        <div class="moService moBtn">
-          <div class="moBtnIcon"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/></svg></div>
-          <div class="moBtnText">고객센터</div>
-        </div>
-      </div>
-      <div class="moMenuList">
-        <div class="mmlBox">
-          <div class="mmlCategory">국내도서</div>
-          <div class="mmlList">
-            <div class="mmlSub">건강&#47;취미</div>
-            <div class="mmlSub">경제경영</div>
-            <div class="mmlSub">과학</div>
-            <div class="mmlSub">교재</div>
-            <div class="mmlSub">사회</div>
-            <div class="mmlSub">소설&#47;시&#47;희곡</div>
-            <div class="mmlSub">수험서&#47;자격증</div>
-            <div class="mmlSub">어린이</div>
-            <div class="mmlSub">에세이&#47;시</div>
-            <div class="mmlSub">여행</div>
-            <div class="mmlSub">역사</div>
-            <div class="mmlSub">요리</div>
-            <div class="mmlSub">자기계발</div>
-            <div class="mmlSub">장르소설</div>
-            <div class="mmlSub">전집</div>
-            <div class="mmlSub">종교&#47;역학</div>
-            <div class="mmlSub">청소년</div>
-            <div class="mmlSub">참고서</div>
-            <div class="mmlSub">컴퓨터&#47;모바일</div>
-            <div class="mmlSub">베스트셀러</div>
-            <div class="mmlSub">이벤트</div>
-            <div class="mmlSub">기타</div>
-          </div>
-        </div>
-        <div class="mmlBox">
-          <div class="mmlCategory">외국도서</div>
-          <div class="mmlList">
-          </div>
-        </div>
-        <div class="mmlBox">
-          <div class="mmlCategory">eBook</div>
-          <div class="mmlList">
-          </div>
-        </div>
-        <div class="mmlBox">
-          <div class="mmlCategory">알라딘굿즈</div>
-          <div class="mmlList">
-          </div>
-        </div>
-        <div class="mmlBox">
-          <div class="mmlCategory">음반</div>
-          <div class="mmlList">
-          </div>
-        </div>
-        <div class="mmlBox">
-          <div class="mmlCategory">FAQ</div>
-          <div class="mmlList">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="slide">
-        <div class="slideBox">
-          <div class="slideImg"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240112_january1_layer.jpg" alt="슬라이드배너1" /></div>
-          <div class="slideImg hide"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240110_monthlybook_layer.jpg" alt="슬라이드배너2" /></div>
-          <div class="slideImg hide"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240116_essay_layer.jpg" alt="슬라이드배너3" /></div>
-          <div class="slideImg hide"><img src="https://image.aladin.co.kr/img/bn/book/2024/01/240104_ebs_layer.jpg" alt="슬라이드배너4" /></div>
-        </div>
-        <div class="slideAr"></div>
-        <div class="slidePager">
-          <p class="pagerActive">1</p>
-          <p>2</p>
-          <p>3</p>
-          <p>4</p>
-        </div>
-      </div>
-      <div class="tab">
-        <div class="tabBtnBox">
-          <div class="tabMenu">
-            <div class="tabBtn menu1 active">추천도서</div>
-            <div class="tabBtn menu2">eBook</div>
-            <div class="tabBtn menu3">외국도서</div>
-            <div class="tabBtn menu4">알라딘굿즈</div>
-          </div>
-        </div>
-        <div class="tabCont">
-          <div class="tabContBox active">
-            <div class="tabContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="tabContentCat">시/에세이</div>
-            <div class="tabContentTit">산책과 연애</div>
-            <div class="tabContentText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
-          </div>
-        </div>
-      </div>
-      <div class="best">
-        <div class="conTit">실시간 Best</div>
-        <div class="bestList">
-          <div class="bestBox active">
-            <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="bestMain">
-              <p class="bestNum">01</p>
-              <p class="bestTit">산책과 연애</p>
-              <p class="bestRank">2</p>
-            </div>
-            <div class="bestInfo">
-              <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-              <div class="bestDetail">
-                <div class="bestAut">유진목 / 2020년 09월 15일</div>
-                <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
-                <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
-              </div>
-            </div>
-          </div>
-          <div class="bestBox">
-            <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="bestMain">
-              <p class="bestNum">02</p>
-              <p class="bestTit">책제목</p>
-              <p class="bestRank">2</p>
-            </div>
-            <div class="bestInfo">
-              <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-              <div class="bestDetail">
-                <div class="bestAut">유진목 / 2020년 09월 15일</div>
-                <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
-                <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
-              </div>
-            </div>
-          </div>
-          <div class="bestBox">
-            <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="bestMain">
-              <p class="bestNum">03</p>
-              <p class="bestTit">책제목</p>
-              <p class="bestRank">2</p>
-            </div>
-            <div class="bestInfo">
-              <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-              <div class="bestDetail">
-                <div class="bestAut">유진목 / 2020년 09월 15일</div>
-                <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
-                <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
-              </div>
-            </div>
-          </div>
-          <div class="bestBox">
-            <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="bestMain">
-              <p class="bestNum">04</p>
-              <p class="bestTit">책제목</p>
-              <p class="bestRank">2</p>
-            </div>
-            <div class="bestInfo">
-              <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-              <div class="bestDetail">
-                <div class="bestAut">유진목 / 2020년 09월 15일</div>
-                <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
-                <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
-              </div>
-            </div>
-          </div>
-          <div class="bestBox">
-            <div class="bestImgPc"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="bestMain">
-              <p class="bestNum">05</p>
-              <p class="bestTit">책제목</p>
-              <p class="bestRank">2</p>
-            </div>
-            <div class="bestInfo">
-              <div class="bestImgMo"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-              <div class="bestDetail">
-                <div class="bestAut">유진목 / 2020년 09월 15일</div>
-                <div class="bestPrice"><span class="discount">10%</span><span class="op">15,000원</span><span class="fp">13,500원</span></div>
-                <div class="bestText">우리가 낮에 산책을 하는 이유가 나무 그늘에서 사랑을 줍기 위해서이고, 우리가 밤에 연애를 하는 이유가 완전하지 않은 당신을 겨우 사랑하기 위해서라면, 시인이『산책과 연애』를 쓴 이유는 무엇일까. 그건 아마도 시인 자신을 둘러싼 모든 시작이 얼마나 오래되었는지를 깨닫기 위함은 아닐까. 돌과 영화, 그리고 사람처럼.</div>
-              </div>
-            </div>
-          </div>
-          <div class="bestMore">더보기 +</div>
-        </div>
-      </div>
-      <div class="banner"></div>
-      <div class="recommend">
-        <div class="conTit">오늘의 추천</div>
-        <div class="recCont">
-          <div class="recContBox">
-            <div class="recContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="recContentCat">시/에세이</div>
-            <div class="recContentTit">산책과 연애</div>
-            <div class="recContentText">우리가 낮에 산책을 하는 이유가 나무 ...</div>
-          </div>
-          <div class="recContBox">
-            <div class="recContentImg"><img src="https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190999014.jpg" alt="산책과 연애"></div>
-            <div class="recContentCat">시/에세이</div>
-            <div class="recContentTit">산책과 연애</div>
-            <div class="recContentText">우리가 낮에 산책을 하는 이유가 나무 ...</div>
-          </div>
-        </div>
-        <div class="recMore">더보기 +</div>
-      </div>
-      <div class="gift">
-        <div class="conTit">알라딘 사은품</div>
-        <div class="giftSlide"></div>
-        <div class="giftAll">전체보기 +</div>
-      </div>
-      <div class="price">
-        <div class="conTit">이 주의 특가</div>
-
-      </div>
-    </div>
-    <footer>
-      <div class="flogo">&#40;주&#41;알라딘커뮤니케이션</div>
-      <div class="fText"><span>대표이사 최우경</span><span>고객정보보호 책임자 최우경</span><span>사업자등록 201-81-23094</span><span>통신판매업신고 중구01520호</span><span>이메일 privacy@aladin.co.kr</span><span>호스팅 제공자 알라딘커뮤니케이션</span><span>(본사) 서울시 중구 서소문로 89-31</span></div>
-      <div class="fMenu">
-        <p>회사소개</p>
-        <p>채용안내</p>
-        <p>이용약관</p>
-        <p class="tcbl">개인정보처리방침</p>
-        <p>중고매장</p>
-        <p>청소년 보호 정책</p>
-        <p>출판사&#183;공급사 안내</p>
-        <p>대량구매</p>
-        <p>제휴마케팅안내</p>
-        <p>광고 안내</p>
-      </div>
-      <div class="fCopy">&#169; Aladin Communication. All Rights Reserved.</div>
-      <div class="fTel">
-        <div class="ftTit">고객센터 1544-2514 &#40;발신자 부담&#41;</div>
-        <div class="ftText">평일 09:00~18:00 &#47; 일요일, 공휴일 휴무</div>
-      </div>
-      <div class="fBtns">
-        <div class="fBtn escrow">구매안전 에스크로 서비스 가입 확인</div>
-        <div class="fBtn isms">정보보호 관리체계 ISMS 인증획득</div>
-      </div>
-    </footer>
   </div>
   <script src="./js/index.js"></script>
 </body>
