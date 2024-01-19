@@ -72,9 +72,7 @@ li div {
 }
 
 .btn_open {
-    position: absolute;
-    bottom: -45px;
-    right: 60px;
+    margin-left: 80px;
 }
 
 a {
