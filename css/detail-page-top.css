@@ -1,8 +1,6 @@
 /* 도서 이미지 영역 */
 .main {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 /* 도서 상품 안내 영역 */
 .main_category {
@@ -59,8 +57,7 @@ p {
 }
 /* 마일리지, 배송 안내 영역 */
 .info {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
 }
 
 li div {
@@ -97,8 +94,7 @@ li div {
 /* 별점 및 리뷰 안내 영역 */
 
 .review_list {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
     display: flex;
     align-items: center; /* 세로로 가운데 정렬 */
     height: 20px;
@@ -113,10 +109,14 @@ span {
     font-size: 12px;
 }
 
+.button {
+    text-align: center;
+}
+
 button {
-    width: 300px;
+    width: 280px;
     height: 30px;
-    margin: 10px 20px;
+    margin: 10px;
     font-size: 12px;
     background-color: white;
     color: #333333;
@@ -128,22 +128,36 @@ button.clicked {
     background-color: #9e9e9e;
 }
 
-/* 오늘의 추천 영역 */
-.today_recommend {
-    margin-left: 20px;
-    margin-right: 20px;
+/* 광고 영역 */
+.ad {
+    margin-top: 10px;
 }
+
+/* 오늘의 추천 영역 */
 
 .today_title {
     font-weight: bold;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin: 15px 20px;
+}
+
+.recommend_move {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.recommend_move_list {
+    display: flex;
+    margin: 0 15px;
+    -ms-overflow-style: none;
+}
+
+.recommend_move_list:-webkit-scrollbar {
+    display: none;
 }
 
 .recommend_move_item {
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
+    margin-left: 5px;
 }
 
 .move-category {
