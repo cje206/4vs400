@@ -88,10 +88,11 @@
 }
 .review1img {
     display: flex;
+    width: 100%;
 }
 .review1img > img {
-    width: 330px;
-    height: 400px;
+    width: 40%;
+    height: 250px;
     margin-left: 20px;
 }
 .review1content > p {
@@ -157,7 +158,10 @@ p {
     margin-right: 20px;
 }
 .hidden9 > img {
-    width: 330px;
-    height: 400px;
+    width: 200px;
+    height: 250px;
     margin-left: 20px;
+}
+
+@media screen and (min-width: 1200px) {
 }
