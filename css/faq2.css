@@ -2,8 +2,13 @@
     margin:0 20px 20px;
     position: relative;
 }
+
+.faqTit {
+    display: none;
+}
 .faqSearch {
     border: 1px solid #ddd;
+    font-size: 20px;
     border-radius: 10px;
     padding-left: 10px;
     line-height: 40px;
@@ -119,3 +124,14 @@
     color: #fff;
 
 }
+
+/* pc  */
+@media screen and (min-width: 1200px){
+    .faqContent{width: 1200px; margin: 0 auto;}
+    .faqQst{display: flex; justify-content: space-between;}
+    .faqTit{display: block; font-size: 30px; font-weight: 800;}
+    .faqSearch {width: 60%; margin: 0; border: 3px solid #333; 10px; padding-left: 30px; line-height: 60px; height: 60px; width: 60%;}
+    .faqSearchBtn {width: 30px; height: 30px; right:20px; none; border: 1px solid #333;  color: #fff #333;}
+} 
+
+
