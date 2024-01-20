@@ -74,11 +74,6 @@
     margin-top: 10px;
     margin-left: 20px;
 }
-.reviewfont {
-    margin-top: 10px;
-    margin-left: 20px;
-    font-size: 17px;
-}
 .container {
     display: flex;
     justify-content: space-between;
@@ -106,8 +101,8 @@
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
-.review2content > p {
-    padding-left: 20px;
+.reviewcontent > p {
+    margin-left: 20px;
     padding-bottom: 20px;
 }
 .reviewbtn {
@@ -120,20 +115,8 @@
     border: 1px solid #999;
     padding: 0 6px;
 }
-.review3content > p {
-    margin-left: 20px;
-    padding-bottom: 20px;
-}
-.review4content > p {
-    margin-left: 20px;
-    padding-bottom: 20px;
-}
 .reviewcontent {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
-}
-.review5content > p {
-    margin-left: 20px;
     padding-bottom: 20px;
 }
 .hidden {
@@ -172,4 +155,9 @@
 }
 p {
     margin-right: 20px;
+}
+.hidden9 > img {
+    width: 330px;
+    height: 400px;
+    margin-left: 20px;
 }

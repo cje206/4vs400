@@ -168,3 +168,11 @@ document.querySelectorAll('.btnToggle').forEach(function (button) {
         toggleReview(targetNumber);
     });
 });
+
+$(document).ready(function () {
+    // "리뷰 더보기" 버튼이 클릭되었을 때
+    $('.reviewplus').click(function () {
+        // 숨겨진 리뷰 컨텐츠의 표시 여부를 토글
+        $('.hiddenreview').toggle();
+    });
+});
