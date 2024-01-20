@@ -1,7 +1,9 @@
+/* 모바일 버전 */
 /* 도서 이미지 영역 */
 .main {
     margin: 20px;
 }
+
 /* 도서 상품 안내 영역 */
 .main_category {
     display: inline-block;
@@ -29,9 +31,13 @@ p {
 }
 
 /* 가격 안내 영역 */
-.price {
+.info-price {
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.price {
+    display: none;
 }
 
 .sale {
@@ -264,4 +270,106 @@ button.clicked {
 .empty_box {
     border: 10px solid #9e9e9e;
     background-color: #9e9e9e;
+}
+
+/* PC버전 */
+
+@media screen and (min-width: 1200px) {
+    .main {
+        margin: 50px 360px 0 360px;
+    }
+
+    .main_book {
+        width: 300px;
+        height: 450px;
+    }
+
+    .book_content {
+        display: block;
+        position: absolute;
+        margin: 0 0 0 350px;
+        top: 50px;
+    }
+
+    .main_category {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+    }
+
+    .main_title {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .info_book {
+        color: #333333;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .main_hr {
+        border: 1px solid #e5e5e5;
+    }
+
+    .info-price {
+        position: absolute;
+        margin: 10px 0 0 350px;
+        top: 150px;
+    }
+
+    .price {
+        display: inline-block;
+        color: #333333;
+        font-size: 14px;
+        margin-right: 40px;
+    }
+
+    .sale {
+        font-size: 14px;
+    }
+
+    .origin_price {
+        font-size: 12px;
+        margin-left: -10px;
+    }
+
+    .sale_price {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .sub_hr {
+        border: none;
+    }
+
+    .info {
+        margin: 0px 360px;
+    }
+
+    .info_list .mileage {
+        position: absolute;
+        margin: 10px 0 0 350px;
+        top: 180px;
+    }
+
+    .list_tilte {
+        font-size: 14px;
+    }
+
+    .list_content {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .mile-list1 {
+        margin: 0 0 0 70px;
+    }
+
+    .mile-list2 {
+        margin: 0 10px 0 0;
+    }
+
+    .btn_open {
+        margin: 0 10px 0 0;
+    }
 }
