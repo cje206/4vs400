@@ -7,8 +7,9 @@
 
 
 /* header */
-header {width: 100%; height: 60px; display: flex; position: fixed; justify-content: space-between; align-items: center; top: 0; left: 0; border-bottom: 1px solid #eee; background: #fff; z-index: 999;}
-.hLogo{width: 60px; height: 100%; padding: 15px 10px; background: #fff;}
+header {width: 100%; height: 60px; position: fixed; top: 0; left: 0; border-bottom: 1px solid #eee; background: #fff; z-index: 999;}
+.headerWrap{display: flex; justify-content: space-between; align-items: center; height: 100%;}
+.hLogo{width: 60px; height: 100%; padding: 18px 10px; background: #fff;}
 .hLogo img{width: 40px; height: auto;}
 
 .hIcons{display: flex;}
@@ -56,8 +57,6 @@ header {width: 100%; height: 60px; display: flex; position: fixed; justify-conte
 .tabBtn{display: inline-block; height: 30px; padding: 0 15px; line-height: 30px; background-color: #eee; margin-right: 10px; border-radius: 15px;}
 .tabBtn.active{background-color: #fff; border: 1px solid #999; font-weight: 500;}
 .tabBtn:last-child{margin-right: 0;}
-
-.tabImgBox{width: 100%; overflow-x: auto; position: relative;}
 
 .tabCont{position: relative; overflow: hidden; transition: all 0.3s;}
 .tabContBox{display: none; position: absolute; text-align: center; z-index: 1; opacity: 0.2;}
@@ -142,11 +141,43 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
 .fBtn.isms{margin-right: 10px; background: #fff url('https://image.aladin.co.kr/img/footer/footer_isms.jpg') no-repeat center left 10px / 24px 24px;}
 
 
-
 /* pc */
 @media screen and (min-width: 1200px) {
+  .pc{display: block;}
+  /* header */
+  header{height: 150px; flex-direction: column; border-bottom: 1px solid #ddd;}
+  .hMenuBg{width: 100%; background-color: #333;}
+  .hMenu{display: flex; width: 1200px; height: 50px; justify-content: space-between; margin: 0 auto;}
+  .hmCat{display: flex; height: 100%; align-items: center;}
+  .hmMy{display: flex; height: 100%; align-items: center;}
+  .hmc{color: #fff; padding: 0 10px; line-height: 50px; font-size: 16px; transition: all 0.3s; cursor: pointer;}
+  .hmc.active{background-color: #fff; color: #333; font-weight: 700;}
+  .hmc:hover{background-color: #fff; color: #333; font-weight: 700;}
+  .hmmBtn{color: #fff; font-size: 16px; line-height: 50px; padding-left: 20px;}
+  .hmmBtn:hover{font-weight: 700;}
+  
+  .headerWrap{width: 1200px; margin: 0 auto; display: flex; height: 100px;}
+
+  .hIcons{display: none;}
+  .moMenuBox{display: none;}
+
+
+  /* container */
   .container{width: 1200px; margin: 0 auto;}
+
+  /* slide */
   .slidePager{width: fit-content; background: none; left: 50%; transform: translateX(-50%);}
   .moPagerNum{display: none;}
   .slidePager p{display: block;}
+
+  /* tab */
+  .tabBtnBox{height: 50px;}
+  .tabBtn{font-size: 16px; line-height: 50px; height: 50px; border: none; border-radius: 10px 10px 0 0; margin: 0; padding: 0 20px;}
+  .tabBtn.active{border-bottom: none;}
+  .tabCont{display: flex; }
+  .tabContBox{width: 20%; text-align: left;}
+  .tabContBox, .tabContBox.bookR, .tabContBox.bookR, .tabContBox.active{position: relative; top: auto; left: auto; right: auto; display: block; opacity: 1; transform: translate(0);}
+  .tabContBox.active .tabContentImg, .tabContentImg {width: 200px; margin: 0 auto;}
+  .tabContBox .bookCat{display: inline-block;}
+  .tabContBox .bookTit, .tabContBox .bookText{display: block;}
 }
