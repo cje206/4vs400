@@ -164,4 +164,11 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
+    body {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .doriban {
+        display: block;
+    }
 }
