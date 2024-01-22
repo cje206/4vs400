@@ -1,12 +1,23 @@
 let now = 0;
+let bnow = 0;
 $(document).ready(function(){
-  setInterval(function(){slide();},3000);
+  setInterval(function(){slide();bestSlide();},3000);
   function slide () {
     now = now === 3 ? 0 : now+=1;
     $('.slidePager p').removeClass('pagerActive');
     $(`.slidePager p:nth-child(${now+2})`).addClass('pagerActive');
     $('.slideBox').animate({left:now*-100+'%'});
     $('.moPagerNum').text(`${now+1} / 4`);
+  }
+
+  function bestSlide() {
+    bnow = bnow === 4 ? 0 : bnow+=1;
+    console.log(bnow);
+    $('.bestBox').removeClass('active');
+    $(`.bestBox:nth-child(${bnow+1})`).addClass('active');
+    $('.bestInfo').css('top',-(bnow)*62+'px');
+    $('.bestBox').css('border-bottom','1px solid #ddd');
+    $(`.bestBox:nth-child(${bnow})`).css('border-bottom','none');
   }
 });
 
@@ -43,6 +54,9 @@ $('.tabContBox').on('click', function(){
 $('.bestBox').on('click', function(){
   $('.bestBox').removeClass('active');
   $(this).addClass('active');
+  bnow = $(this).index();
+  console.log(-bnow*60);
+  $(this).children('.bestInfo').css('top',-bnow*62+'px');
   $('.bestBox').css('border-bottom','1px solid #ddd');
   $(this).prev().css('border-bottom','none');
 });
@@ -52,7 +66,7 @@ $('.mmlBox').on('click', function(){
   $(this).children('.mmlList').stop().slideToggle();
 });
 
-$('.flogo').on('click', function(){
-  $('.fText').stop().slideToggle();
-  $('.fMenu').stop().slideToggle();
+$('.moFooter .flogo').on('click', function(){
+  $('.moFooter .fText').stop().slideToggle();
+  $('.moFooter .fMenu').stop().slideToggle();
 });

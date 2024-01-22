@@ -15,6 +15,8 @@ header {width: 100%; height: 60px; position: fixed; top: 0; left: 0; border-bott
 .hIcons{display: flex;}
 .hIcons .hIcon{margin-right: 10px;}
 
+.hPop{display: none;}
+
 .hSearch{position: relative; width: 100%; min-width: 180px; margin-right: 10px;}
 .hSearch input{border: none; background: #eee; width: 100%; height: 40px; line-height: 40px; border-radius: 20px;padding: 0 15px;}
 .hSearchIcon{position: absolute; top: 50%; right: 10px; transform: translateY(-40%);}
@@ -72,7 +74,7 @@ header {width: 100%; height: 60px; position: fixed; top: 0; left: 0; border-bott
 
 /* best */
 .best{background-color: #f3f3f3; padding-bottom: 20px;}
-.bestImgPc, .bestBox .bestInfo{display: none;}
+.bestBox .bestInfo{display: none;}
 .bestMain{position: relative; display: flex; align-items: center; width: 100%;}
 .bestBox{margin: 0 20px; padding: 20px; border-bottom: 1px solid #ddd;display: flex; flex-direction: column;}
 .bestBox:first-child{border-top: 1px solid #ddd;}
@@ -83,8 +85,8 @@ header {width: 100%; height: 60px; position: fixed; top: 0; left: 0; border-bott
 .bestBox.active{background: #fff; border: 1px solid #ddd; border-radius: 10px;}
 .bestBox.active .bestMain{margin-bottom: 10px;}
 .bestBox.active .bestInfo{display: flex;}
-.bestImgMo{width: 100px; margin-right: 10px;}
-.bestImgMo img{width: 100%; height: auto;}
+.bestImg{width: 100px; margin-right: 10px;}
+.bestImg img{width: 100%; height: auto;}
 .bestDetail{width: 100%;}
 .bestAut{font-size: 10px; color: #999;}
 .bestPrice .discount{margin-right: 20px;}
@@ -139,6 +141,7 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
 .fBtn{width: 135px; height: 40px; background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 5px 0 5px 40px; font-size: 10px; word-break: keep-all; text-align: left; background: url();}
 .fBtn.escrow{margin-right: 10px; background: #fff url('https://image.aladin.co.kr/img/footer/footer_escrow.jpg') no-repeat center left 10px / 24px 24px;}
 .fBtn.isms{margin-right: 10px; background: #fff url('https://image.aladin.co.kr/img/footer/footer_isms.jpg') no-repeat center left 10px / 24px 24px;}
+.pcFooter{display: none;}
 
 
 /* pc */
@@ -147,6 +150,13 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
   /* header */
   header{height: 150px; flex-direction: column; border-bottom: 1px solid #ddd;}
   .hMenuBg{width: 100%; background-color: #333;}
+  .hLogo{height: auto;}
+  .hLogo img{width: 80px;}
+  .hSearch{width: 600px; height: 60px;}
+  .hSearch input{border: 1px solid #777; background: #fff; line-height: 60px; height: 60px; border-radius: 30px; padding: 0 20px; font-size: 16px;}
+  .hSearchIcon{right: 20px;}
+  .hSearchIcon svg{width: 28px; height: 28px;}
+  .hPop{display: block;}
   .hMenu{display: flex; width: 1200px; height: 50px; justify-content: space-between; margin: 0 auto;}
   .hmCat{display: flex; height: 100%; align-items: center;}
   .hmMy{display: flex; height: 100%; align-items: center;}
@@ -180,4 +190,29 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
   .tabContBox.active .tabContentImg, .tabContentImg {width: 200px; margin: 0 auto;}
   .tabContBox .bookCat{display: inline-block;}
   .tabContBox .bookTit, .tabContBox .bookText{display: block;}
+
+  /* recommend */
+  .recContBox{width: 20%;}
+
+  /* footer */
+  .moFooter{display: none;}
+  .pcFooter{display: flex; width: 1200px; margin: 0 auto; text-align: left;}
+  .fLeft{width: 200px; padding: 10px 20px 10px 0; border-right: 1px solid #ccc; margin-right: 20px;}
+  .fLogo{font-size: 14px; margin-bottom: 15px;}
+  .ftTit{margin-bottom: 10px;}
+  .fText{display: block;}
+  .fCenter{width: 260px; padding-right: 20px; border-right: 1px solid #ccc;}
+  .fMenu{display: flex; margin: 0;}
+  .fMenu p{width: 50%; margin: 10px 0;}
+  .fRight{margin-left: 20px;padding: 10px 0;}
+  .fText{margin: 0 0 15px 0;}
+  .fBtns{justify-content: left; margin-bottom: 15px;}
+  .fCopy{border: none;}
+  .bestBox{position: relative; width: 400px;}
+  .bestBox.active .bestMain{margin: 0;}
+  .bestInfo{position: absolute; top: -0; left: 430px; width: 700px; height: 310px; padding: 30px; background: #fff; border-radius: 10px; border: 1px solid #ddd;}
+  .bestImg{width: fit-content; height: 100%; margin-right: 20px;}
+  .bestImg img{width: auto; height: 100%;}
+
+  .bestMore{display: none;}
 }
