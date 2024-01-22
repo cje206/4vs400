@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 도서 정보 버튼 클릭 시
-    document.querySelector('.doriban > span:nth-child(1)').addEventListener('click', function () {
+    document.querySelector('.book-content > span:nth-child(1)').addEventListener('click', function () {
         scrollToElement('.basic');
     });
 
     // 리뷰 버튼 클릭 시
-    document.querySelector('.doriban > span:nth-child(2)').addEventListener('click', function () {
+    document.querySelector('.book-content > span:nth-child(2)').addEventListener('click', function () {
         scrollToElement('.review');
     });
 
     // 반품/교환 버튼 클릭 시
-    document.querySelector('.doriban > span:nth-child(3)').addEventListener('click', function () {
+    document.querySelector('.book-content > span:nth-child(3)').addEventListener('click', function () {
         scrollToElement('.returntitle');
     });
 
@@ -29,7 +29,7 @@ function scrollToElement(selector) {
     const element = document.querySelector(selector);
     if (element) {
         window.scrollTo({
-            top: element.offsetTop - document.querySelector('.doriban').offsetHeight,
+            top: element.offsetTop - document.querySelector('.book-content').offsetHeight,
             behavior: 'smooth',
         });
     }
@@ -38,10 +38,12 @@ function scrollToElement(selector) {
 // 스크롤 위치에 따른 버튼 스타일 변경 함수
 function handleScroll() {
     const scrollPosition = window.scrollY;
-    const basicOffset = document.querySelector('.basic').offsetTop - document.querySelector('.doriban').offsetHeight;
-    const reviewOffset = document.querySelector('.review').offsetTop - document.querySelector('.doriban').offsetHeight;
+    const basicOffset =
+        document.querySelector('.basic').offsetTop - document.querySelector('.book-content').offsetHeight;
+    const reviewOffset =
+        document.querySelector('.review').offsetTop - document.querySelector('.book-content').offsetHeight;
     const returnOffset =
-        document.querySelector('.returntitle').offsetTop - document.querySelector('.doriban').offsetHeight;
+        document.querySelector('.returntitle').offsetTop - document.querySelector('.book-content').offsetHeight;
 
     // 도서 정보 버튼 스타일 변경
     if (scrollPosition >= basicOffset && scrollPosition < reviewOffset) {
@@ -64,7 +66,7 @@ function handleScroll() {
 
 // 활성화된 버튼에 스타일 적용하는 함수
 function setActiveButton(index) {
-    const buttons = document.querySelectorAll('.doriban > span');
+    const buttons = document.querySelectorAll('.book-content > span');
     buttons.forEach((button, i) => {
         if (i + 1 === index) {
             button.style.color = 'blue'; // 활성화된 버튼의 색상을 변경

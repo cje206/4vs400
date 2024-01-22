@@ -1,4 +1,4 @@
-.doriban {
+.book-content {
     position: sticky;
     top: 0;
     background-color: white;
@@ -8,7 +8,7 @@
     align-items: center;
     border-bottom: 2px solid #ddd;
 }
-.doriban > span {
+.book-content > span {
     margin-left: 20px;
     font-size: 20px;
     cursor: pointer;
@@ -49,15 +49,15 @@
     margin-left: 20px;
     padding-bottom: 20px;
 }
-.mokchafont {
+.indexfont {
     margin-top: 10px;
     margin-left: 20px;
     font-size: 20px;
 }
-.mokcha {
+.index {
     border-bottom: 1px solid #ddd;
 }
-.mokcha > p {
+.index > p {
     margin-left: 20px;
     margin-top: 5px;
     padding-bottom: 20px;
@@ -159,7 +159,7 @@ p {
 }
 .hidden9 > img {
     width: 200px;
-    height: 250px;
+    height: auto;
     margin-left: 20px;
 }
 
@@ -168,10 +168,10 @@ p {
         margin-left: 200px;
         margin-right: 200px;
     }
-    .doriban {
+    .book-content {
         display: block;
     }
-    .doriban > span {
+    .book-content > span {
         line-height: 35px;
     }
 }
