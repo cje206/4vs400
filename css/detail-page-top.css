@@ -77,6 +77,8 @@ li div {
     z-index: 1;
 }
 
+/* 마일리지 적립 안내 팝업 영역 */
+
 .btn_open {
     margin-left: 80px;
 }
@@ -313,7 +315,7 @@ button.clicked {
 
     .info-price {
         position: absolute;
-        margin: 10px 0 0 350px;
+        margin: 20px 0 0 350px;
         top: 150px;
     }
 
@@ -346,10 +348,28 @@ button.clicked {
         margin: 0px 360px;
     }
 
-    .info_list .mileage {
+    .info-list1 .mileage {
         position: absolute;
-        margin: 10px 0 0 350px;
+        margin: 20px 0 0 350px;
         top: 180px;
+    }
+
+    .pop_wrap .pop_inner {
+        padding: 30px 50px;
+        width: auto;
+    }
+
+    .info_mil li {
+        list-style: disc;
+        font-size: 12px;
+        margin: 15px 0 15px 0;
+        width: auto;
+    }
+
+    .btn_close {
+        width: 500px;
+        font-size: 14px;
+        margin-top: 30px;
     }
 
     .list_tilte {
@@ -359,6 +379,7 @@ button.clicked {
     .list_content {
         display: inline-block;
         font-size: 14px;
+        margin-left: 70px;
     }
 
     .mile-list1 {
@@ -371,5 +392,31 @@ button.clicked {
 
     .btn_open {
         margin: 0 10px 0 0;
+    }
+
+    .info-list2 {
+        position: absolute;
+        margin: 20px 0 0 350px;
+        top: 210px;
+    }
+
+    .ytz {
+        margin: 0 0 0 70px;
+        font-size: 12px;
+    }
+
+    .ytz ~ div {
+        margin: 10px 0 0 70px;
+    }
+
+    .review_list {
+        margin: 0px 360px;
+    }
+
+    .review_list img {
+        display: inline-block;
+        position: relative;
+        top: -200px;
+        left: 350px;
     }
 }
