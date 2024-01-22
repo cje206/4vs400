@@ -92,7 +92,7 @@
 }
 .review1img > img {
     width: 40%;
-    height: 250px;
+    height: auto;
     margin-left: 20px;
 }
 .review1content > p {
@@ -131,7 +131,7 @@
     font-size: 17px;
     text-align: center;
     margin-top: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 3px solid #ddd;
     padding-bottom: 20px;
 }
 .returntitle {
@@ -170,5 +170,8 @@ p {
     }
     .doriban {
         display: block;
+    }
+    .doriban > span {
+        line-height: 35px;
     }
 }
