@@ -5,7 +5,7 @@
 }
 
 /* 도서 상품 안내 영역 */
-.main_category {
+.mainCategory {
     display: inline-block;
     background: #d9d9d9;
     text-align: center;
@@ -17,14 +17,14 @@
     margin-bottom: 5px;
 }
 
-.main_title {
+.mainTitle {
     margin-bottom: 5px;
     color: #333333;
     font-size: 14px;
     font-weight: bold;
 }
 
-.book_content > p {
+.bookContent > p {
     margin-bottom: 5px;
     color: #9e9e9e;
     font-size: 10px;
@@ -34,6 +34,7 @@
 .info-price {
     margin-top: 10px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #cacaca;
 }
 
 .price {
@@ -63,7 +64,6 @@
 }
 /* 마일리지, 배송 안내 영역 */
 .info {
-    margin: 0 20px;
 }
 
 li div {
@@ -165,7 +165,6 @@ h4 {
 /* 별점 및 리뷰 안내 영역 */
 
 .review_list {
-    margin: 0 20px;
     display: flex;
     align-items: center; /* 세로로 가운데 정렬 */
     height: 20px;
@@ -284,34 +283,44 @@ button.clicked {
 
 @media screen and (min-width: 1200px) {
     .main {
-        margin: 50px 360px 0 360px;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
     }
 
     /* 도서 이미지 영역 */
-    .main_book {
+    .mainBook {
         width: 300px;
         height: 450px;
+        margin: 0px 20px 0px 0px;
     }
 
     /* 도서 상품 안내 영역  */
-    .book_content {
-        display: block;
-        position: absolute;
-        margin: 0 360px 0 360px;
-        top: 50px;
+    .boolDetail {
+        display: flex;
+        flex-direction: column;
     }
 
-    .main_category {
+    .bookContent {
+    }
+
+    .bookContent > p {
+        margin-bottom: 15px;
+        color: #9e9e9e;
+        font-size: 12px;
+    }
+
+    .mainCategory {
         margin: 0 0 10px 0;
         font-size: 12px;
     }
 
-    .main_title {
+    .mainTitle {
         margin-bottom: 10px;
         font-size: 20px;
     }
 
-    .info_book {
+    .infoBook {
         color: #333333;
         font-size: 12px;
         margin-bottom: 10px;
@@ -323,9 +332,6 @@ button.clicked {
 
     /* 가격 안내 영역역 */
     .info-price {
-        position: absolute;
-        margin: 20px 360px 0 360px;
-        top: 150px;
     }
 
     .price {
@@ -356,13 +362,10 @@ button.clicked {
 
     /* 마일리지 안내 영역 */
     .info {
-        margin: 0px 360px;
+        margin: 0px;
     }
 
     .info-list1 .mileage {
-        position: absolute;
-        margin: 20px 360px 0 360px;
-        top: 180px;
     }
 
     .list_tilte {
@@ -376,7 +379,6 @@ button.clicked {
     }
 
     .mile-list1 {
-        margin: 0 0 0 70px;
     }
 
     .mile-list2 {
@@ -409,9 +411,6 @@ button.clicked {
 
     /* 배송 안내 영역 */
     .info-list2 {
-        position: absolute;
-        margin: 20px 360px 0 360px;
-        top: 210px;
     }
 
     .ytz {
@@ -426,36 +425,25 @@ button.clicked {
     /* 별점 및 리뷰 안내 영역 */
 
     .review_list {
-        margin: 0px 360px 0px 360px;
+        margin: 20px 0px 20px 0px;
     }
 
     .review_list img {
-        display: inline-block;
-        position: relative;
-        top: -200px;
-        left: 350px;
     }
 
     .review_list span {
-        display: inline-block;
-        position: relative;
-        top: -200px;
-        left: 355px;
     }
 
     .review-button {
         display: inline-block;
-        position: relative;
-        top: -200px;
-        left: 695px;
         width: 280px;
         height: 30px;
-        /* margin: 10px; */
-        font-size: 12px;
+        margin: 0px;
+        /* font-size: 12px;
         background-color: #ffffff;
         color: #333333;
         border-radius: 10px;
-        border: 1px solid #cacaca;
+        border: 1px solid #cacaca; */
     }
 
     /* 장바구니 수량 영역 */
