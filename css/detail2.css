@@ -1,10 +1,23 @@
-.doriban > span {
+.book-content {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+.book-content > span {
     margin-left: 20px;
-    font-size: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 50px;
 }
 .basic {
     margin-top: 10px;
-    margin-left: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ddd;
 }
 .basicfont {
     font-size: 20px;
@@ -17,10 +30,14 @@
     margin-top: 5px;
     margin-left: 20px;
     margin-right: 20px;
+    padding-bottom: 20px;
 }
 .basicul li::before {
     content: '\2022';
     margin-right: 10px;
+}
+.intro {
+    border-bottom: 1px solid #ddd;
 }
 .introfont {
     margin-top: 10px;
@@ -30,15 +47,23 @@
 .intro > p {
     margin-top: 5px;
     margin-left: 20px;
+    padding-bottom: 20px;
 }
-.mokchafont {
+.indexfont {
     margin-top: 10px;
     margin-left: 20px;
     font-size: 20px;
 }
-.mokcha > p {
+.index {
+    border-bottom: 1px solid #ddd;
+}
+.index > p {
     margin-left: 20px;
     margin-top: 5px;
+    padding-bottom: 20px;
+}
+.review {
+    padding-top: 20px;
 }
 .reviewfont {
     margin-top: 10px;
@@ -49,16 +74,11 @@
     margin-top: 10px;
     margin-left: 20px;
 }
-.reviewfont {
-    margin-top: 10px;
-    margin-left: 20px;
-    font-size: 17px;
-}
-.reviewhead {
+.container {
     display: flex;
     justify-content: space-between;
 }
-.reviewhead > .star {
+.container > .star {
     margin-top: 20px;
     margin-right: 20px;
 }
@@ -68,17 +88,23 @@
 }
 .review1img {
     display: flex;
+    width: 100%;
 }
 .review1img > img {
-    width: 330px;
-    height: 400px;
+    width: 40%;
+    height: auto;
     margin-left: 20px;
 }
 .review1content > p {
-    margin-left: 20px;
+    padding-left: 20px;
 }
-.review2content > p {
+.review1content > .lastp {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.reviewcontent > p {
     margin-left: 20px;
+    padding-bottom: 20px;
 }
 .reviewbtn {
     text-align: center;
@@ -90,50 +116,62 @@
     border: 1px solid #999;
     padding: 0 6px;
 }
-.review3content > p {
-    margin-left: 20px;
+.reviewcontent {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
-.review4content > p {
-    margin-left: 20px;
+.hidden {
+    display: none;
 }
-.review5content > p {
+.hidden > p {
     margin-left: 20px;
+    padding-bottom: 20px;
 }
 .reviewplus {
     font-size: 17px;
     text-align: center;
     margin-top: 10px;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 20px;
 }
 .returntitle {
     font-size: 20px;
-    margin-left: 20px;
+    padding-left: 20px;
     margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
 .returnfont {
     font-size: 17px;
     margin-left: 20px;
     margin-top: 20px;
 }
-.return1 > p {
-    margin-top: 5px;
-    margin-left: 20px;
+.return {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
-.return2 > p {
-    margin-top: 5px;
-    margin-left: 20px;
-}
-.return3 > p {
-    margin-top: 5px;
-    margin-left: 20px;
-}
-.return4 > p {
-    margin-top: 5px;
-    margin-left: 20px;
-}
-.return5 > p {
+.return > p {
     margin-top: 5px;
     margin-left: 20px;
 }
 p {
     margin-right: 20px;
+}
+.hidden9 > img {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .book-content {
+        display: block;
+    }
+    .book-content > span {
+        line-height: 35px;
+    }
 }
