@@ -9,27 +9,28 @@
 .faqSearchBox {
     display: flex;
     flex-wrap: no;
-    width:700px;
+    width: 10%x;
+    /* width:750px; */
     /* position: relative; */
 }
 .faqSearch {
     border: 1px solid #ddd;
-    font-size: 20px;
+    font-size: 17px;
     border-radius: 10px;
-    padding-left: 10px;
+    padding-left: 0px;
     line-height: 40px;
     height: 40px;
-    width: 100%;
+    width: 200%;
 }
 span {
     margin: 10px;
 }
 .faqSearchBtn {
-    width: 30px;
-    height: 30px;
-    /* position: relative; */
-    top: auto;
-    right: auto;
+    /* position: absolute; */
+    width: 40px;
+    height:40px;
+    top: 5px;
+    right: 30px;
     background:url('/img/search.png') 0 0 no-repeat;
     background-size: contain;
     background-position: right;
@@ -52,14 +53,14 @@ span {
     text-align: center;
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
-    font-size: 12px;
+    font-size: 17px;
 
 }
 .faqMenu.active {
     background-color: #ddd;
 }
 .faqQnaBox {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .faqQ {
     padding: 15px 20px 15px 40px;
@@ -92,27 +93,33 @@ span {
 .faqQnaBox .faqQ {
     cursor: pointer;
 }
-.faqQnaBox .faqQ:hover {
+/* .faqQnaBox .faqQ:hover {
     background-color: #ddd;
-  }
+  } */
   
   .faqQnaBox .faqQ.active {
     font-weight: bold;
   }
   /* 아코디언  */
-
-
-
-.faqPagerBox {
+.faqPagerBox a {
+    object-fit: ;
+    margin: 50px;
+    margin-bottom: 50px;
+    margin-bottom: 50px;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+.faqPagerBox a: hover:not(.active) {
+    background-color: #ddd
+}
+.faqPager a{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-}
-.faqPager {
     margin: 0 7px;
     width: 20px;
     height: 20px;
-    /* line-height: 20px; */
     font-size: 12px;
     color: #777;
     border: 1px solid #ddd;
@@ -130,14 +137,17 @@ span {
     .faqContent{width: 1200px; margin: auto;}
     .faqQst{display: flex; justify-content: space-between;}
     .faqTit{display: block; font-size: 30px; font-weight: 800;}
-    .faqSearch {width: 60%; margin: 0; border: 2px solid #333; 10px; padding-left: 30px; line-height: 60px; height: 60px; width: 90%;}
+    .faqSearchBox {position: relative;}
+    .faqSearch {position: absolute; 60%; margin: 0; border: 2px solid #333; 10px; padding-left: 30px; line-height: 60px; height: 60px; width: 90%;}
+    .faqSearchBtn {position: absolute; width: 90px; height: 60px;  background-color: black; color:#fff; border-radius: 8px; display: flex; align-items: center; font-size: 20px; justify-content: center;background-image: none;}
+    .faqSearchBtn::before {
+        content: "검색";
+        font-size: 17px;
+        display: flex;}
     /* .faqSearchBtn {width: 30px; height: 30px; right:20px; none;   color:#333;} */
     .faqMenuBox {display:flex; flex-wrap: nowrap; margin: 0 20px 20px;}
     .faqMenu {line-height:50px; height:50px; text-align: center; font-size: 15px; width: auto; padding: 0 20px;}
-    .faqSearchBtn {width: 90px; height: 60px;  background-color: black; color:#fff; border-radius: 8px; display: flex; align-items: center; font-size: 20px; justify-content: center;background-image: none;}
-    .faqSearchBtn::before {
-        content: "검색";
-        display: flex;}
+    
     /* .faqMenu:nth-child(3n) {
         border-right: none; */
     }
