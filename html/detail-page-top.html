@@ -45,6 +45,7 @@
                     <a href="#pop_info_1" class="btn_open"
                         ><img src="../img/m_btn_down.gif" alt="dowm_btn" width="15px"
                     /></a>
+                    <!-- 마일리지 안내 팝업 -->
                     <div id="pop_info_1" class="pop_wrap" style="display: none">
                         <div class="pop_inner">
                             <p class="dsc">
@@ -79,13 +80,26 @@
             <span class="empty"> </span>
             <span>리뷰 (141)</span>
         </div>
-        <div class="button">
-            <button type="button"><img src="../img/location.png" alt="location" /> 매장 재고 관리</button>
+            <button type="button" class="button"><img src="../img/location.png" alt="location" /> 매장 재고 관리</button>
+        
+
+        <!-- 장바구니 수량 영역 -->
+
+        <div class="count">
+            <span class="quantity">수량</span>
+            <span class="empty"></span>
+            <span id="quantity">0</span>
+            <div class="arrow">
+                <button type ="button" class="plus" onclick="plus();" style="font-size: 8px; color: #CACACA;">ᐱ</button>
+            <button type="button" class="minus" onclick="minus();" style="font-size: 8px; color: #CACACA;">ᐯ</button>
+            </div>
         </div>
+
+
         <!-- 광고 배너 영역 -->
         <div class="ad">
             <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332031663&start=ADleft">
-                <img class="ad_left" src="../img/ad1.jpg" alt="ad_left" width="100%" />
+                <img class="ad-left" src="../img/ad1.jpg" alt="ad_left" width="100%" />
             </a>
             <!-- <a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=259518&start=ADright">
                 <img class="ad_right" src="../img/ad2.jpg" alt="ad_right" width="320px" />
@@ -183,6 +197,6 @@
         </div>
         <!-- 구분선 -->
         <div class="empty_box"></div>
+        <script src="../js/detail-page-top.js"></script>
     </body>
-    <script src="../js/detail-page-top.js"></script>
 </html>

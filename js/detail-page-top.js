@@ -16,3 +16,21 @@ for (var j = 0; j < target.length; j++) {
         this.parentNode.parentNode.style.display = 'none';
     });
 }
+
+// 장바구니 클릭
+var currentQuantity = 0;
+
+function plus() {
+    currentQuantity++;
+    updateQuantity();
+}
+
+function minus() {
+    if (currentQuantity > 0) {
+        currentQuantity--;
+        updateQuantity();
+    }
+}
+function updateQuantity() {
+    document.getElementById('quantity').innerText = currentQuantity;
+}
