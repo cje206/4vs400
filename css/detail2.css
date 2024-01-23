@@ -25,6 +25,7 @@
 }
 .basic > p {
     margin-bottom: 5px;
+    margin-right: 20px;
 }
 .basicul {
     margin-top: 5px;
@@ -48,6 +49,7 @@
     margin-top: 5px;
     margin-left: 20px;
     padding-bottom: 20px;
+    margin-right: 20px;
 }
 .indexfont {
     margin-top: 10px;
@@ -61,6 +63,7 @@
     margin-left: 20px;
     margin-top: 5px;
     padding-bottom: 20px;
+    margin-right: 20px;
 }
 .review {
     padding-top: 20px;
@@ -97,14 +100,17 @@
 }
 .review1content > p {
     padding-left: 20px;
+    margin-right: 20px;
 }
 .review1content > .lastp {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
+    margin-right: 20px;
 }
 .reviewcontent > p {
     margin-left: 20px;
     padding-bottom: 20px;
+    margin-right: 20px;
 }
 .reviewbtn {
     text-align: center;
@@ -126,6 +132,7 @@
 .hidden > p {
     margin-left: 20px;
     padding-bottom: 20px;
+    margin-right: 20px;
 }
 .reviewplus {
     font-size: 17px;
@@ -153,8 +160,6 @@
 .return > p {
     margin-top: 5px;
     margin-left: 20px;
-}
-p {
     margin-right: 20px;
 }
 .hidden9 > img {
