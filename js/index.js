@@ -1,7 +1,7 @@
 let now = 0;
 let bnow = 0;
 $(document).ready(function(){
-  setInterval(function(){slide();bestSlide();},3000);
+  setInterval(function(){slide();},3000);
   function slide () {
     now = now === 3 ? 0 : now+=1;
     $('.slidePager p').removeClass('pagerActive');
@@ -9,10 +9,9 @@ $(document).ready(function(){
     $('.slideBox').animate({left:now*-100+'%'});
     $('.moPagerNum').text(`${now+1} / 4`);
   }
-
+  setInterval(function(){bestSlide();},7000);
   function bestSlide() {
     bnow = bnow === 4 ? 0 : bnow+=1;
-    console.log(bnow);
     $('.bestBox').removeClass('active');
     $(`.bestBox:nth-child(${bnow+1})`).addClass('active');
     $('.bestInfo').css('top',-(bnow)*62+'px');
@@ -55,7 +54,6 @@ $('.bestBox').on('click', function(){
   $('.bestBox').removeClass('active');
   $(this).addClass('active');
   bnow = $(this).index();
-  console.log(-bnow*60);
   $(this).children('.bestInfo').css('top',-bnow*62+'px');
   $('.bestBox').css('border-bottom','1px solid #ddd');
   $(this).prev().css('border-bottom','none');
