@@ -221,16 +221,16 @@ button.clicked {
 .recommend_move {
     width: 100%;
     overflow-x: auto;
+    scrollbar-width: none; /* Firefox에 대한 설정 */
+}
+
+.recommend_move::-webkit-scrollbar {
+    display: none;
 }
 
 .recommend_move_list {
     display: flex;
     margin: 0 15px;
-    -ms-overflow-style: none;
-}
-
-.recommend_move_list:-webkit-scrollbar {
-    display: none;
 }
 
 .recommend_move_item {
