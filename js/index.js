@@ -1,5 +1,9 @@
+// 슬라이드 변수
 let now = 0;
+
+// 실시간 BEST 변수
 let bnow = 0;
+
 $(document).ready(function(){
   setInterval(function(){slide();},3000);
   function slide () {
@@ -14,11 +18,32 @@ $(document).ready(function(){
     bnow = bnow === 4 ? 0 : bnow+=1;
     $('.bestBox').removeClass('active');
     $(`.bestBox:nth-child(${bnow+1})`).addClass('active');
-    $('.bestInfo').css('top',-(bnow)*62+'px');
+    $('.bestInfo').css('top',-(bnow)*65+'px');
     $('.bestBox').css('border-bottom','1px solid #ddd');
     $(`.bestBox:nth-child(${bnow})`).css('border-bottom','none');
   }
 });
+
+$(window).resize(function(){
+  let screenWidth = $(window).width();
+  if (screenWidth < 1200) {
+    $('.tabContBox').removeClass('bookL');
+    $('.tabContBox').removeClass('bookR');
+    $('.tabContBox').removeClass('active');
+    $('.tabContBox').css({'top':'auto',height:'fit-content'});
+    $('.tabContBox:nth-child(1)').addClass('active');
+    $('.tabContBox:nth-child(2)').addClass('bookR');
+    $('.bookR').css('top','94px');
+    $('.tabContBox').on('click');
+
+  } else {
+    $('.tabContBox').removeClass('bookL');
+    $('.tabContBox').removeClass('bookR');
+    $('.tabContBox').removeClass('active');
+    $('.tabContBox').css('top','auto');
+    $('.tabContBox').off('click');
+  }
+})
 
 $('.moMenuOpen').on('click',function(){
   $('.moMenuBox').stop().animate({left:0});
@@ -54,7 +79,7 @@ $('.bestBox').on('click', function(){
   $('.bestBox').removeClass('active');
   $(this).addClass('active');
   bnow = $(this).index();
-  $(this).children('.bestInfo').css('top',-bnow*62+'px');
+  $(this).children('.bestInfo').css('top',-bnow*65+'px');
   $('.bestBox').css('border-bottom','1px solid #ddd');
   $(this).prev().css('border-bottom','none');
 });

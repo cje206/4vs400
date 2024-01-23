@@ -35,7 +35,7 @@ header {width: 100%; height: 60px; position: fixed; top: 0; left: 0; border-bott
 
 
 /* container */
-.container{padding: 60px 0;}
+.container{padding: 60px 0; min-width: 320px;}
 .conTit{font-weight: 700; padding: 20px 20px 10px;}
 .discount{font-size: 12px; color: #E70909; font-weight: 700;}
 .op{text-decoration: line-through; font-size: 8px; color: #bbb;}
@@ -109,8 +109,22 @@ header {width: 100%; height: 60px; position: fixed; top: 0; left: 0; border-bott
 
 /* gift */
 .gift{margin-bottom: 20px;}
-.giftSlide{width: 100%; height: 135px; background-color: #162CA1; margin-bottom: 15px;}
+.giftSlide{width: 100%; background-color: aliceblue; margin-bottom: 15px; overflow: scroll;-ms-overflow-style: none;}
+.giftSlide::-webkit-scrollbar{display:none;}
+.giftWrap{display: flex; width: fit-content;}
+.giftBox{width: 100vw; height: 50vw; padding: 30px 20px; display: flex; flex-direction: column; justify-content: flex-end;}
+.gbTit{font-weight: 700;}
+.gbText{font-size: 12px;}
 .giftAll{text-align: center;}
+.giftImg1{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240112_january_gift01.jpg) center/cover;}
+.giftImg2{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240112_january_gift04.jpg) center/cover;}
+.giftImg3{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240112_january_gift07.jpg) center/cover;}
+.giftImg4{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240112_january_gift10.jpg) center/cover;}
+.giftImg5{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240112_january_gift13.jpg) center/cover;}
+.giftImg6{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240101_january_gift01.jpg) center/cover;}
+.giftImg7{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240101_january_gift04.jpg) center/cover;}
+.giftImg8{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240101_january_gift07.jpg) center/cover;}
+.giftImg9{background: linear-gradient(to left, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.25) 30%, rgba(255, 255, 255, 0.5) 40%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 1) 75%), url(https://image.aladin.co.kr/img/events/book/2024/01/240101_january_gift10.jpg) center/cover;}
 
 /* price */
 .priCont{display: flex;justify-content: space-between; margin: 0 20px 25px;}
@@ -174,21 +188,27 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
 
   /* container */
   .container{padding: 150px 0;}
-  .conTit{width: 1200px; margin: 0 auto;}
+  .conTit{width: 1200px; margin: 0 auto 20px; font-size: 20px; padding: 0;}
+  .discount{font-size: 16px;}
+  .op{font-size: 14px;}
+  .fp{font-size: 16px;}
+  .bookCat{width: fit-content; text-align: center; font-size: 12px; margin-bottom: 10px;}
+  .bookTit{font-size: 16px;t}
+  .bookText{font-size: 14px;}
 
   /* slide */
-  .slide{width: 1200px; margin: 0 auto 30px;}
+  .slide{width: 1200px; margin: 0 auto;}
   .slidePager{width: fit-content; background: none; left: 50%; transform: translateX(-50%);}
   .moPagerNum{display: none;}
   .slidePager p{display: block;}
 
   /* tab */
-  .tab{width: 1200px; margin: 0 auto;}
+  .tab{width: 1200px; margin: 0 auto; padding: 30px 0;}
   .tabBtnBox{height: 50px;}
   .tabBtn{font-size: 16px; line-height: 50px; height: 50px; border: none; border-radius: 10px 10px 0 0; margin: 0; padding: 0 20px;}
   .tabBtn.active{border-bottom: none;}
   .tabCont{display: flex; justify-content: space-between;}
-  .tabContBox{width: 200px; text-align: left;}
+  .tabContBox{width: 200px; text-align: left; height: fit-content;}
   .tabContBox, .tabContBox.bookR, .tabContBox.bookR, .tabContBox.active{position: relative; top: auto; left: auto; right: auto; display: block; opacity: 1; transform: translate(0);}
   .tabContBox.active .tabContentImg, .tabContentImg {width: 200px; height: 300px; margin: 0 auto 20px; overflow: hidden;}
   .tabContBox .bookCat{display: inline-block;}
@@ -196,15 +216,36 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
   .tabContBox.active .bookText, .tabContBox .bookText{display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
 
   /* best */
-  .bestList{width: 1200px; margin: 0 auto;}
+  .best{padding: 30px 0;}
+  .bestList{width: 1200px; margin: 0 auto; font-size: 16px;}
+  .bestBox{position: relative; width: 400px; margin: 0;}
+  .bestBox.active .bestMain{margin: 0;}
+  .bestNum, .bestTit, .bestRank{font-size: 16px;}
+  .bestAut{font-size: 14px; margin: 6px 0;}
+  .bestText{font-size: 16px; margin-top: 8px;}
+  .bestInfo{position: absolute; top: -0; left: 430px; width: 700px; height: 320px; padding: 30px; background: #fff; border-radius: 10px; border: 1px solid #ddd;}
+  .bestImg{width: fit-content; height: 100%; margin-right: 20px;}
+  .bestImg img{width: auto; height: 100%;}
+
+  .bestMore{display: none;}
 
   /* recommend */
-  .recCont{width: 1200px; margin: 0 auto;}
-  .recContBox{width: 20%;}
+  .recommend{padding: 30px 0;}
+  .recCont{width: 1200px; margin: 0 auto; justify-content: space-between;}
+  .recContBox{width: 200px; padding: 0;}
   .recContentImg{width: 200px; height: 300px;}
+  .recMore{display: none;}
+
+  /* gift */
+  .gift{padding: 30px 0;}
+  .giftAll{display: none;}
 
   /* price */
-  .priCont{width: 1200px; margin: 0 auto;}
+  .price{position: relative; width: 1200px; height: 450px; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; padding: 30px 0;}
+  .price .conTit::after{content: '지금 알라딘에서 인기있는 상품이에요.'; display: block; font-size: 14px; font-weight: 400; width: 130px; word-break: keep-all; margin-top: 30px;}
+  .priCont{width: 870px; position: absolute; top: 30px; right: 50%; transform: translateX(600px);}
+  .priContentImg{width: 270px; height: 270px;}
+  .priMore{width: 240px; margin: 0; text-align: left; border: none; cursor: pointer; font-size: 16px;}
 
   /* footer */
   .moFooter{display: none;}
@@ -220,11 +261,5 @@ footer{text-align: center; background: #eee; padding: 15px 0 40px 0;}
   .fText{margin: 0 0 15px 0;}
   .fBtns{justify-content: left; margin-bottom: 15px;}
   .fCopy{border: none;}
-  .bestBox{position: relative; width: 400px;}
-  .bestBox.active .bestMain{margin: 0;}
-  .bestInfo{position: absolute; top: -0; left: 430px; width: 700px; height: 310px; padding: 30px; background: #fff; border-radius: 10px; border: 1px solid #ddd;}
-  .bestImg{width: fit-content; height: 100%; margin-right: 20px;}
-  .bestImg img{width: auto; height: 100%;}
-
-  .bestMore{display: none;}
+  
 }
