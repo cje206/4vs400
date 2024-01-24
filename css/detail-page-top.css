@@ -33,7 +33,8 @@
 /* 가격 안내 영역 */
 .infoPrice {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #cacaca;
 }
 
