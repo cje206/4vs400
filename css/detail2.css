@@ -9,84 +9,81 @@
     border-bottom: 2px solid #ddd;
 }
 .book-content > span {
-    margin-left: 20px;
+    padding-left: 20px;
     font-size: 20px;
     cursor: pointer;
     line-height: 50px;
 }
 .basic {
-    margin-top: 10px;
+    padding-top: 10px;
     padding-left: 20px;
     border-bottom: 1px solid #ddd;
 }
 .basicfont {
     font-size: 20px;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 .basic > p {
-    margin-bottom: 5px;
-    margin-right: 20px;
+    padding-bottom: 5px;
 }
 .basicul {
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 20px;
 }
 .basicul li::before {
     content: '\2022';
-    margin-right: 10px;
+    padding-right: 10px;
 }
 .intro {
     border-bottom: 1px solid #ddd;
 }
 .introfont {
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
     font-size: 20px;
 }
 .intro > p {
-    margin-top: 5px;
-    margin-left: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
     padding-bottom: 20px;
-    margin-right: 20px;
 }
 .indexfont {
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
     font-size: 20px;
 }
 .index {
     border-bottom: 1px solid #ddd;
 }
 .index > p {
-    margin-left: 20px;
-    margin-top: 5px;
+    padding-left: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
-    margin-right: 20px;
 }
 .review {
     padding-top: 20px;
 }
 .reviewfont {
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
     font-size: 20px;
 }
 .review > img {
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 .container {
     display: flex;
     justify-content: space-between;
 }
 .container > .star {
-    margin-top: 20px;
-    margin-right: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 .reviewdate {
-    margin-left: 20px;
+    padding-left: 20px;
     color: gray;
 }
 .review1img {
@@ -96,21 +93,18 @@
 .review1img > img {
     width: 40%;
     height: auto;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 .review1content > p {
     padding-left: 20px;
-    margin-right: 20px;
 }
 .review1content > .lastp {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
-    margin-right: 20px;
 }
 .reviewcontent > p {
-    margin-left: 20px;
+    padding-left: 20px;
     padding-bottom: 20px;
-    margin-right: 20px;
 }
 .reviewbtn {
     text-align: center;
@@ -130,53 +124,97 @@
     display: none;
 }
 .hidden > p {
-    margin-left: 20px;
+    padding-left: 20px;
     padding-bottom: 20px;
-    margin-right: 20px;
 }
 .reviewplus {
     font-size: 17px;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 10px;
     border-bottom: 3px solid #ddd;
     padding-bottom: 20px;
 }
 .returntitle {
     font-size: 20px;
     padding-left: 20px;
-    margin-top: 20px;
+    padding-top: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
 .returnfont {
     font-size: 17px;
-    margin-left: 20px;
-    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 .return {
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
 .return > p {
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
 }
 .hidden9 > img {
     width: 200px;
     height: auto;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
 @media screen and (min-width: 1200px) {
-    body {
-        margin-left: 200px;
-        margin-right: 200px;
-    }
     .book-content {
         display: block;
+        margin: 0 auto;
+        width: 1200px;
     }
     .book-content > span {
         line-height: 35px;
+    }
+    .basic {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .intro {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .index {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .review {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .reviewhead {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .reviewdate {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .review1img {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .review1content {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .reviewcontent {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .reviewplus {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .returntitle {
+        margin: 0 auto;
+        width: 1200px;
+    }
+    .return {
+        margin: 0 auto;
+        width: 1200px;
     }
 }
