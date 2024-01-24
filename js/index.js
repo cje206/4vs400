@@ -13,6 +13,10 @@ let slideImgs = $('.slideBox').width()/slideWidth;
 let bnow = 0;
 let bestCount = $('.bestBox.open').length;
 
+// 광고 배너 변수
+let bbl = 0;
+let abl = 0;
+
 // gift 변수
 let bscl = 0;
 let ascl = 0;
@@ -122,9 +126,6 @@ $('.slideArrR').on('click', function(){
   $('.slideBox').stop().animate({left:now*-100+'%'});
 });
 
-$('.giftSlide').on('touchstart',function(){
-  bscl = $(this).scrollLeft();
-});
 
 $('.tabBtn').on('click', function(){
   $('.tabBtn').removeClass('active')
@@ -156,6 +157,21 @@ $('.bestMore').on('click', function(){
   bestCount = $('.bestBox.open').length;
 });
 
+$('.bannerSlide').on('touchstart',function(){
+  bbl = $(this).scrollLeft();
+});
+
+$('.bannerSlide').on('touchend',function(){
+  if (screenWidth < 1200) {
+    abl = $(this).scrollLeft();
+    if (bscl < ascl) {
+      $('.bannerSlide').stop().animate({scrollLeft : bbl+screenWidth});
+    } else if (bscl > ascl) {
+      $('.bannerSlide').stop().animate({scrollLeft : bbl-screenWidth});
+    }
+  }
+});
+
 $('.recMore').on('click', function(){
   let recAllCount = $('.recContBox').length;
   let recOpenCount = $('.recContBox.open').length;
@@ -171,6 +187,21 @@ $('.recMore').on('click', function(){
   }
 });
 
+$('.giftSlide').on('touchstart',function(){
+  bscl = $(this).scrollLeft();
+});
+
+$('.giftSlide').on('touchend',function(){
+  if (screenWidth < 1200) {
+    ascl = $(this).scrollLeft();
+    if (bscl < ascl) {
+      $('.giftSlide').stop().animate({scrollLeft : bscl+screenWidth});
+    } else if (bscl > ascl) {
+      $('.giftSlide').stop().animate({scrollLeft : bscl-screenWidth});
+    }
+  }
+});
+
 $('.priMore').on('click', function(){
   let recAllCount = $('.priContBox').length;
   let recOpenCount = $('.priContBox.open').length;
@@ -183,17 +214,6 @@ $('.priMore').on('click', function(){
     $('.priMore').text('접기');
   } else {
     $(`.priContBox:nth-child(-n+${willOpen})`).addClass('open');
-  }
-});
-
-$('.giftSlide').on('touchend',function(){
-  if (screenWidth < 1200) {
-    ascl = $(this).scrollLeft();
-    if (bscl < ascl) {
-      $('.giftSlide').stop().animate({scrollLeft : bscl+screenWidth});
-    } else if (bscl > ascl) {
-      $('.giftSlide').stop().animate({scrollLeft : bscl-screenWidth});
-    }
   }
 });
 
