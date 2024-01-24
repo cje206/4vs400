@@ -9,7 +9,7 @@
     border-bottom: 2px solid #ddd;
 }
 .book-content > span {
-    padding-left: 20px;
+    margin-left: 20px;
     font-size: 20px;
     cursor: pointer;
     line-height: 50px;
@@ -158,6 +158,28 @@
     width: 200px;
     height: auto;
     padding-left: 20px;
+}
+.bottom {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    z-index: 101;
+    justify-content: space-evenly;
+    border-top: 2px solid #ddd;
+    display: flex;
+}
+.bottom1 > span {
+    line-height: 50px;
+}
+.bottom2 {
+    display: flex;
+}
+.bottom2 button {
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    margin-top: 10px;
 }
 
 @media screen and (min-width: 1200px) {
