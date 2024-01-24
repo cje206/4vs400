@@ -80,7 +80,7 @@
                     <button type="button" class="button-top"><img src="../img/location.png" alt="location" /> 매장 재고 관리</button>
                 </div>
                 <!-- 장바구니 수량 영역 -->
-                <div class="count">
+                <div class="quantityCount">
 
                     <span class="quantity">수량</span>
                     <span class="empty"></span>
@@ -89,6 +89,13 @@
                         <button type ="button" class="plus" onclick="plus();" style="font-size: 8px; color: #CACACA;">ᐱ</button>
                     <button type="button" class="minus" onclick="minus();" style="font-size: 8px; color: #CACACA;">ᐯ</button>
                     </div>
+                </div>
+                <!-- 구매 버튼 -->
+                <div class="salesArea">
+                    <button type="button" class="salesAreabtn enterCart">장바구니</button>
+                    <button type="button" class="salesAreabtn enterBuyNow">바로구매</button>
+                    <button type="button" class="salesAreabtn enterPresent">선물하기</button>
+                    <button type="button" class="salesAreabtn enterSave">보관함</button>
                 </div>
             </div>
         </div>
@@ -104,13 +111,13 @@
         </div>
         <!-- 오늘의 추천 영역 -->
         <div class="today_recommend">
-            <div class="today_title">오늘의 추천</div>
+            <div class="todayTitle1">오늘의 추천</div>
+            <div class="todayTitle2">연간 검색</div>
             <div class="recommend_move">
                 <ul class="recommend_move_list">
                     <li class="recommend_move_item">
                         <div class="today_recommend1">
-                            <img src="../img/라디오 체조.jpg" alt="오류입니다." width="130px" height="200px" />
-                            <br />
+                            <img class="moveBI" src="../img/라디오 체조.jpg" alt="오류입니다." width="130px" height="200px" />
                             <div class="move-category">소설/일본문학</div>
                             <div class="move_title">라디오 체조</div>
                             <div class="recommend_move_info">
@@ -125,7 +132,7 @@
                     </li>
                     <li class="recommend_move_item">
                         <div class="today_recommend2">
-                            <img src="../img/역행자.jpg" alt="오류입니다." width="130px" height="200px" />
+                            <img class="moveBI" src="../img/역행자.jpg" alt="오류입니다." width="130px" height="200px" />
                             <br />
                             <div class="move-category">자기계발/성공학</div>
                             <div class="move_title">역행자</div>
@@ -141,8 +148,7 @@
                     </li>
                     <li class="recommend_move_item">
                         <div class="today_recommend3">
-                            <img src="../img/돌파매매 전략.jpg" alt="오류입니다." width="130px" height="200px" />
-                            <br />
+                            <img class="moveBI" src="../img/돌파매매 전략.jpg" alt="오류입니다." width="130px" height="200px" />
                             <div class="move-category">경제경영/주식·펀드</div>
                             <div class="move_title">돌파매매 전략</div>
                             <div class="recommend_move_info">
@@ -158,8 +164,7 @@
                     </li>
                     <li class="recommend_move_item">
                         <div class="today_recommend4">
-                            <img src="../img/세상 끝의 살인.jpg" alt="오류입니다." width="130px" height="200px" />
-                            <br />
+                            <img class="moveBI" src="../img/세상 끝의 살인.jpg" alt="오류입니다." width="130px" height="200px" />
                             <div class="move-category">소설/일본문학</div>
                             <div class="move_title">세상 끝의 살인</div>
                             <div class="recommend_move_info">
@@ -175,8 +180,7 @@
                     </li>
                     <li class="recommend_move_item">
                         <div class="today_recommend5">
-                            <img src="../img/퓨처 셀프.jpg" alt="오류입니다." width="130px" height="200px" />
-                            <br />
+                            <img class="moveBI" src="../img/퓨처 셀프.jpg" alt="오류입니다." width="130px" height="200px" />
                             <div class="move-category">자기계발/성공학</div>
                             <div class="move_title">퓨처 셀프</div>
                             <div class="recommend_move_info">

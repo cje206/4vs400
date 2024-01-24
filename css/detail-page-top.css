@@ -198,7 +198,14 @@ button.clicked {
 
 /* 장바구니 수량 */
 
-.count {
+.quantityCount {
+    display: none;
+}
+
+/* 구매 버튼 */
+
+.salesAreabtn {
+    margin-right: 20px;
     display: none;
 }
 
@@ -213,10 +220,18 @@ button.clicked {
 
 /* 오늘의 추천 영역 */
 
-.today_title {
+.today_recommend {
+    border-bottom: 50px solid #cacaca;
+}
+
+.todayTitle1 {
     font-weight: bold;
     font-size: 14px;
     margin: 15px 20px;
+}
+
+.todayTitle2 {
+    display: none;
 }
 
 .recommend_move {
@@ -293,18 +308,14 @@ button.clicked {
 
     /* 도서 이미지 영역 */
     .mainBook {
-        width: 300px;
-        height: 450px;
-        margin: 0px 20px 0px 0px;
+        margin: 0px 50px 0px 0px;
     }
 
     /* 도서 상품 안내 영역  */
-    .boolDetail {
+    .bookDetail {
         display: flex;
         flex-direction: column;
-    }
-
-    .bookContent {
+        width: 100%;
     }
 
     .bookContent > p {
@@ -336,6 +347,7 @@ button.clicked {
     /* 가격 안내 영역역 */
     .info-price {
         margin-bottom: 10px;
+        padding: 0 0 20px 0;
     }
 
     .price {
@@ -369,7 +381,8 @@ button.clicked {
         margin: 0px;
     }
 
-    .info-list1 .mileage {
+    .mileage {
+        margin: 20px 0 15px 0;
     }
 
     .list_tilte {
@@ -380,9 +393,6 @@ button.clicked {
         display: inline-block;
         font-size: 14px;
         margin-left: 70px;
-    }
-
-    .mile-list1 {
     }
 
     .mile-list2 {
@@ -414,11 +424,9 @@ button.clicked {
     }
 
     /* 배송 안내 영역 */
-    .info-list2 {
-    }
 
     .ytz {
-        margin: 0 0 0 70px;
+        margin: 5px 0 3px 70px;
         font-size: 12px;
     }
 
@@ -429,13 +437,7 @@ button.clicked {
     /* 별점 및 리뷰 안내 영역 */
 
     .review_list {
-        margin: 10px 0px 10px 0px;
-    }
-
-    .review_list img {
-    }
-
-    .review_list span {
+        margin: 20px 0px 20px 0px;
     }
 
     .review-button {
@@ -452,9 +454,9 @@ button.clicked {
 
     /* 장바구니 수량 영역 */
 
-    .count {
+    .quantityCount {
         display: flex;
-        margin: 10px 0 10px 0;
+        margin: 20px 0 20px 0;
         text-align: center;
     }
 
@@ -493,8 +495,19 @@ button.clicked {
         border: 1px solid;
     }
 
+    /* 구매 버튼 */
+
+    .salesAreabtn {
+        display: inline;
+        width: 100px;
+        height: 30px;
+        margin: 0px 20px 20px 0;
+        border: 1px solid #d9d9d9;
+        background-color: #d9d9d9;
+        color: #333333;
+    }
+
     /* 광고 배너 영역 */
-    /* 수정 해야함 */
 
     .ad {
         margin: 50px auto;
@@ -523,5 +536,43 @@ button.clicked {
     .today_recommend {
         margin: 0 auto;
         width: 1200px;
+        border-bottom: none;
+    }
+
+    .todayTitle1 {
+        display: none;
+    }
+
+    .todayTitle2 {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 0 20px 0;
+    }
+
+    .recommend_move_list {
+        margin: 0;
+    }
+    .recommend_move_item {
+        margin-right: 50px;
+    }
+
+    .moveBI {
+        width: 200px;
+        height: 300px;
+    }
+
+    .move-category {
+        font-size: 12px;
+        margin: 15px 0 10px 0;
+    }
+
+    .move_title {
+        font-size: 20px;
+    }
+
+    .recommend_move_info {
+        font-size: 16px;
+        width: 200px;
     }
 }
