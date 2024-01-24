@@ -5,7 +5,7 @@
 }
 
 /* 도서 상품 안내 영역 */
-.main_category {
+.mainCategory {
     display: inline-block;
     background: #d9d9d9;
     text-align: center;
@@ -17,14 +17,14 @@
     margin-bottom: 5px;
 }
 
-.main_title {
+.mainTitle {
     margin-bottom: 5px;
     color: #333333;
     font-size: 14px;
     font-weight: bold;
 }
 
-p {
+.bookContent > p {
     margin-bottom: 5px;
     color: #9e9e9e;
     font-size: 10px;
@@ -34,6 +34,7 @@ p {
 .info-price {
     margin-top: 10px;
     margin-bottom: 20px;
+    border-bottom: 1px solid #cacaca;
 }
 
 .price {
@@ -63,7 +64,6 @@ p {
 }
 /* 마일리지, 배송 안내 영역 */
 .info {
-    margin: 0 20px;
 }
 
 li div {
@@ -81,11 +81,9 @@ li div {
 
 .btn_open {
     margin-left: 80px;
-}
-
-a {
     text-decoration: none;
 }
+
 .wrap {
     padding: 10px;
 }
@@ -131,6 +129,7 @@ h4 {
 .btn_close {
     width: 180px;
     height: 30px;
+    border: 1px solid #f21c8c;
     font-size: 12px;
     background-color: #f21c8c;
     color: #fff;
@@ -164,7 +163,6 @@ h4 {
 /* 별점 및 리뷰 안내 영역 */
 
 .review_list {
-    margin: 0 20px;
     display: flex;
     align-items: center; /* 세로로 가운데 정렬 */
     height: 20px;
@@ -174,20 +172,19 @@ h4 {
     font-size: 12px;
     color: #cacaca;
 }
-span {
+.main-review {
     color: #333333;
     font-size: 12px;
 }
 
-.button {
+.review-button {
     text-align: center;
     margin: 15px;
 }
 
-button {
+.button-top {
     width: 100%;
     height: 30px;
-    /* margin: 10px; */
     font-size: 12px;
     background-color: #ffffff;
     color: #333333;
@@ -210,6 +207,10 @@ button.clicked {
     margin-top: 10px;
 }
 
+.ad_right {
+    display: none;
+}
+
 /* 오늘의 추천 영역 */
 
 .today_title {
@@ -221,16 +222,16 @@ button.clicked {
 .recommend_move {
     width: 100%;
     overflow-x: auto;
+    scrollbar-width: none; /* Firefox에 대한 설정 */
+}
+
+.recommend_move::-webkit-scrollbar {
+    display: none;
 }
 
 .recommend_move_list {
     display: flex;
     margin: 0 15px;
-    -ms-overflow-style: none;
-}
-
-.recommend_move_list:-webkit-scrollbar {
-    display: none;
 }
 
 .recommend_move_item {
@@ -284,34 +285,45 @@ button.clicked {
 
 @media screen and (min-width: 1200px) {
     .main {
-        margin: 50px 360px 0 360px;
+        margin: 0 auto;
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
     }
 
     /* 도서 이미지 영역 */
-    .main_book {
+    .mainBook {
         width: 300px;
         height: 450px;
+        margin: 0px 20px 0px 0px;
     }
 
     /* 도서 상품 안내 영역  */
-    .book_content {
-        display: block;
-        position: absolute;
-        margin: 0 360px 0 360px;
-        top: 50px;
+    .boolDetail {
+        display: flex;
+        flex-direction: column;
     }
 
-    .main_category {
+    .bookContent {
+    }
+
+    .bookContent > p {
+        margin-bottom: 10px;
+        color: #9e9e9e;
+        font-size: 12px;
+    }
+
+    .mainCategory {
         margin: 0 0 10px 0;
         font-size: 12px;
     }
 
-    .main_title {
+    .mainTitle {
         margin-bottom: 10px;
         font-size: 20px;
     }
 
-    .info_book {
+    .infoBook {
         color: #333333;
         font-size: 12px;
         margin-bottom: 10px;
@@ -323,9 +335,7 @@ button.clicked {
 
     /* 가격 안내 영역역 */
     .info-price {
-        position: absolute;
-        margin: 20px 360px 0 360px;
-        top: 150px;
+        margin-bottom: 10px;
     }
 
     .price {
@@ -356,13 +366,10 @@ button.clicked {
 
     /* 마일리지 안내 영역 */
     .info {
-        margin: 0px 360px;
+        margin: 0px;
     }
 
     .info-list1 .mileage {
-        position: absolute;
-        margin: 20px 360px 0 360px;
-        top: 180px;
     }
 
     .list_tilte {
@@ -376,7 +383,6 @@ button.clicked {
     }
 
     .mile-list1 {
-        margin: 0 0 0 70px;
     }
 
     .mile-list2 {
@@ -409,9 +415,6 @@ button.clicked {
 
     /* 배송 안내 영역 */
     .info-list2 {
-        position: absolute;
-        margin: 20px 360px 0 360px;
-        top: 210px;
     }
 
     .ytz {
@@ -426,46 +429,33 @@ button.clicked {
     /* 별점 및 리뷰 안내 영역 */
 
     .review_list {
-        margin: 0px 360px 0px 360px;
+        margin: 10px 0px 10px 0px;
     }
 
     .review_list img {
-        display: inline-block;
-        position: relative;
-        top: -200px;
-        left: 350px;
     }
 
     .review_list span {
-        display: inline-block;
-        position: relative;
-        top: -200px;
-        left: 355px;
     }
 
-    .button {
+    .review-button {
         display: inline-block;
-        position: relative;
-        top: -200px;
-        left: 695px;
         width: 280px;
         height: 30px;
-        /* margin: 10px; */
-        font-size: 12px;
+        margin: 0px;
+        /* font-size: 12px;
         background-color: #ffffff;
         color: #333333;
         border-radius: 10px;
-        border: 1px solid #cacaca;
+        border: 1px solid #cacaca; */
     }
 
     /* 장바구니 수량 영역 */
 
     .count {
-        display: block;
-        margin: 0px 360px;
-        position: relative;
-        top: -200px;
-        left: 350px;
+        display: flex;
+        margin: 10px 0 10px 0;
+        text-align: center;
     }
 
     .quantity {
@@ -476,17 +466,15 @@ button.clicked {
     #quantity {
         text-align: center;
         border: 1px solid #cacaca;
-        position: absolute;
         font-size: 14px;
         width: 50px;
-        height: 28px;
+        height: 30px;
     }
 
     .arrow {
         text-align: center;
-        position: absolute;
-        left: 90px;
-        top: 0px;
+        display: flex;
+        flex-direction: column;
     }
 
     .plus {
@@ -494,6 +482,7 @@ button.clicked {
         height: 15px;
         text-align: center;
         border-radius: 0;
+        border: 1px solid;
     }
 
     .minus {
@@ -501,21 +490,28 @@ button.clicked {
         height: 15px;
         text-align: center;
         border-radius: 0;
-        position: absolute;
-        left: 0px;
-        bottom: -7px;
+        border: 1px solid;
     }
 
     /* 광고 배너 영역 */
     /* 수정 해야함 */
 
     .ad {
-        margin: 0 360px 0 360px;
-        position: relative;
+        margin: 50px auto;
+        width: 1200px;
         bottom: 70px;
+        display: flex;
     }
 
-    .ad-left {
+    .adLeft {
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .adRight {
         width: 100%;
         height: 150px;
         margin: 0 auto;
@@ -525,6 +521,7 @@ button.clicked {
 
     /* 오늘의 추천 영역 */
     .today_recommend {
-        margin: 0 360px 0 360px;
+        margin: 0 auto;
+        width: 1200px;
     }
 }

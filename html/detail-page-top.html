@@ -11,99 +11,96 @@
     <body>
         <div class="main">
             <!-- 도서 이미지 영역 -->
-            <div class="main_book">
+            <div class="mainBook">
                 <img src="../img/도시와 그 불확실한 벽.jpg" alt="오류입니다." width="100%" />
             </div>
             <!-- 도서 상품 안내 영역 -->
-            <div class="book_content">
-                <span class="main_category">소설/일본문학</span>
-                <div class="main_title">도시와 그 불확실한 벽</div>
-                <p class="info_book">
-                    무라카미 하루키 (지은이), 홍은주 (옮긴 이) / 문학동네 / 2023-09-06 / 원제 : 街とその不確かな壁
-                </p>
-                <hr class="main_hr" color="#fff" />
-            </div>
-            <!-- 가격 안내 영역 -->
-            <div class="info-price">
-                <span class="price">금액</span>
-                <span class="sale">10%</span>
-                <span class="empty"> </span>
-                <span class="origin_price">19,500원</span>
-                <span class="sale_price">17,500원</span>
-            </div>
-        </div>
+            <div class="bookDetail">
+                <div class="bookContent">
+                    <span class="mainCategory">소설/일본문학</span>
+                    <div class="mainTitle">도시와 그 불확실한 벽</div>
+                    <p class="infoBook">
+                        무라카미 하루키 (지은이), 홍은주 (옮긴 이) / 문학동네 / 2023-09-06 / 원제 : 街とその不確かな壁
+                    </p>
+                </div>
+                <!-- 가격 안내 영역 -->
+                <div class="info-price">
+                    <span class="price">금액</span>
+                    <span class="sale">10%</span>
+                    <span class="empty"> </span>
+                    <span class="origin_price">19,500원</span>
+                    <span class="sale_price">17,500원</span>
+                </div>
+                <div class="info">
+                    <!-- 마일리지 안내 영역 -->
+                    <ul class="info-list1">
+                        <li class="mileage">
+                            <div class="list_tilte">마일리지</div>
+                            <div class="list_content mile-list1">970원 (5%) + 멤버십 (3~1%)</div>
+                            <div class="list_content mile-list2">+ 5만원이상 구매시 2,000원</div>
+                            <a href="#pop_info_1" class="btn_open"
+                                ><img src="../img/m_btn_down.gif" alt="dowm_btn" width="15px"
+                            /></a>
+                            <!-- 마일리지 안내 팝업 -->
+                            <div id="pop_info_1" class="pop_wrap" style="display: none">
+                                <div class="pop_inner">
+                                    <p class="dsc">
+                                        <h4>마일리지 적립</h4>
+                                        <ul class="info_mil">
+                                            <li>적립 예상 마일리지는 현금성 결제 수단을 사용시 적립됩니다.</li>
+                                            <li>쿠폰, 적립금과 같은 비현금성 결제 수단을 이용할 경우 사용액의 비율만큼 마일리지 적립이 제외됩니다.</li>
+                                        </ul>
+                                    </p>
+                                    <button type="button_close" class="btn_close">확인했어요</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 배송 안내 영역 -->
+                    <ul class="info-list2">
+                        <li class="delivery">
+                            <div class="list_tilte">배송</div>
+                            <div class="list_content">무료</div>
+                        </li>
+                        <li>
+                            <span class="ytz">양탄자배송</span>
+                            <br />
+                            <div>오후 1시까지 주문하면 밤 11시 <span class="ytz_text">잠들기전 배송</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="review_list">
+                    <!-- 별점 및 리뷰 안내 영역 -->
+                    <img src="../img/icon_star9.png" alt="별점9" width="90px" />
+                    <span class="score">(9.0)</span>
+                    <span class="empty"> </span>
+                    <span class="main-review">리뷰 (141)</span>
+                </div>
+                <div class="review-button">
+                    <button type="button" class="button-top"><img src="../img/location.png" alt="location" /> 매장 재고 관리</button>
+                </div>
+                <!-- 장바구니 수량 영역 -->
+                <div class="count">
 
-        <hr class="sub_hr" color="#E5E5E5" />
-        <br />
-        <div class="info">
-            <!-- 마일리지 안내 영역 -->
-            <ul class="info-list1">
-                <li class="mileage">
-                    <div class="list_tilte">마일리지</div>
-                    <div class="list_content mile-list1">970원 (5%) + 멤버십 (3~1%)</div>
-                    <div class="list_content mile-list2">+ 5만원이상 구매시 2,000원</div>
-                    <a href="#pop_info_1" class="btn_open"
-                        ><img src="../img/m_btn_down.gif" alt="dowm_btn" width="15px"
-                    /></a>
-                    <!-- 마일리지 안내 팝업 -->
-                    <div id="pop_info_1" class="pop_wrap" style="display: none">
-                        <div class="pop_inner">
-                            <p class="dsc">
-                                <h4>마일리지 적립</h4>
-                                <ul class="info_mil">
-                                    <li>적립 예상 마일리지는 현금성 결제 수단을 사용시 적립됩니다.</li>
-                                    <li>쿠폰, 적립금과 같은 비현금성 결제 수단을 이용할 경우 사용액의 비율만큼 마일리지 적립이 제외됩니다.</li>
-                                </ul>
-                            </p>
-                            <button type="button_close" class="btn_close">확인했어요</button>
-                        </div>
+                    <span class="quantity">수량</span>
+                    <span class="empty"></span>
+                    <span id="quantity">0</span>
+                    <div class="arrow">
+                        <button type ="button" class="plus" onclick="plus();" style="font-size: 8px; color: #CACACA;">ᐱ</button>
+                    <button type="button" class="minus" onclick="minus();" style="font-size: 8px; color: #CACACA;">ᐯ</button>
                     </div>
-                </li>
-            </ul>
-            <!-- 배송 안내 영역 -->
-            <ul class="info-list2">
-                <li class="delivery">
-                    <div class="list_tilte">배송</div>
-                    <div class="list_content">무료</div>
-                </li>
-                <li>
-                    <span class="ytz">양탄자배송</span>
-                    <br />
-                    <div>오후 1시까지 주문하면 밤 11시 <span class="ytz_text">잠들기전 배송</span></div>
-                </li>
-            </ul>
-        </div>
-        <div class="review_list">
-            <!-- 별점 및 리뷰 안내 영역 -->
-            <img src="../img/icon_star9.png" alt="별점9" width="90px" />
-            <span class="score">(9.0)</span>
-            <span class="empty"> </span>
-            <span>리뷰 (141)</span>
-        </div>
-            <button type="button" class="button"><img src="../img/location.png" alt="location" /> 매장 재고 관리</button>
-        
-
-        <!-- 장바구니 수량 영역 -->
-
-        <div class="count">
-            <span class="quantity">수량</span>
-            <span class="empty"></span>
-            <span id="quantity">0</span>
-            <div class="arrow">
-                <button type ="button" class="plus" onclick="plus();" style="font-size: 8px; color: #CACACA;">ᐱ</button>
-            <button type="button" class="minus" onclick="minus();" style="font-size: 8px; color: #CACACA;">ᐯ</button>
+                </div>
             </div>
         </div>
-
 
         <!-- 광고 배너 영역 -->
         <div class="ad">
             <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332031663&start=ADleft">
-                <img class="ad-left" src="../img/ad1.jpg" alt="ad_left" width="100%" />
+                <img class="adLeft" src="../img/ad1.jpg" alt="ad_left" width="100%" />
             </a>
-            <!-- <a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=259518&start=ADright">
-                <img class="ad_right" src="../img/ad2.jpg" alt="ad_right" width="320px" />
-            </a> -->
+            <a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=259518&start=ADright">
+                <img class="adRight" src="../img/ad2.jpg" alt="ad_right" width="320px" />
+            </a>
         </div>
         <!-- 오늘의 추천 영역 -->
         <div class="today_recommend">
@@ -117,7 +114,7 @@
                             <div class="move-category">소설/일본문학</div>
                             <div class="move_title">라디오 체조</div>
                             <div class="recommend_move_info">
-                                <공중그네>의 이상하고 유쾌한 정신과 의사 이라부가 17년 만에 돌아왔다.
+                                &#60;공중그네&#62;의 이상하고 유쾌한 정신과 의사 이라부가 17년 만에 돌아왔다.
                             </div>
                             <div class="move_review_list">
                                 <img src="../img/icon_star10.png" alt="별점10" width="70px" />
@@ -195,8 +192,6 @@
                 </ul>
             </div>
         </div>
-        <!-- 구분선 -->
-        <div class="empty_box"></div>
         <script src="../js/detail-page-top.js"></script>
     </body>
 </html>
