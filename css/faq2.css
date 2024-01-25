@@ -1,0 +1,173 @@
+.faqQst {
+    margin:0 20px 20px;
+    position: relative;
+}
+
+.faqTit {
+    display: none;
+}
+.faqSearchBox {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 10%x;
+    /* width:750px; */
+    
+}
+.faqSearch {
+    position: relative;
+    border: 1px solid #ddd;
+    font-size: 17px;
+    border-radius: 10px;
+    padding-left: 0px;
+    line-height: 50px;
+    height: 50px;
+    width: 200%;
+}
+span {
+    margin: 10px;
+}
+.faqSearchBtn {
+    position: absolute;
+    width: 33px ;
+    height: 33px ;
+    top: 8px;
+    right: 15px;
+    background:url('/img/search.png') 0 0 no-repeat;
+    background-size: contain;
+    background-position: right;
+    border: none;
+    background-color: transparent; 
+
+}
+.faqMenuBox {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin:0 20px 20px;
+
+}
+.faqMenu{
+    line-height: 40px;
+    height: 40px;
+    width: 33.3%;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    font-size: 17px;
+}
+.faqMenu.active {
+    background-color: #ddd;
+}
+
+/* Qna */
+.faqQnaBox {
+    margin-bottom: 10px;
+}
+.faqQna {
+    
+    
+}
+.faqQ {
+    display: flex;
+    padding: 15px 20px 15px 43px;
+    border-bottom: 1px solid #ddd;
+    text-indent: -20px;
+}
+.qst {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1d45d4;
+}
+.qstCont {
+    flex-wrap: nowrap;
+}
+.faqA { 
+    padding: 15px 20px 15px 43px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ddd;
+    display: none;
+    text-indent: -20px;
+    padding-left: 10px;
+   
+}
+
+.ans {
+    font-weight: 700;
+    font-size: 16px;
+    color: #1d45d4;
+    /* padding-left: 35px; */
+}
+
+
+
+
+/* 아코디언 */
+.faqQnaBox .faqA {
+    display: none;
+}
+
+.faqQnaBox .faqQ {
+    cursor: pointer;
+}
+/* .faqQnaBox .faqQ:hover {
+    background-color: #ddd;
+  } */
+  
+  .faqQnaBox .faqQ.active {
+    font-weight: bold;
+  }
+  /* 페이저  */
+  .faqPagerBox {
+    display: flex;
+    justify-content: center;
+  }
+.faqPagerBox a {
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+.faqPagerBox a: hover:not(.active) {
+    background-color: #ddd
+}
+.faqPager a{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin: 0 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #777;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.faqPager.active {
+    border: none;
+    background-color: #333;
+    color: #fff;
+
+}
+
+/* pc  */
+@media screen and (min-width: 1200px){
+    .faqContent{width: 1200px; margin: auto;}
+    .faqQst{display: flex; justify-content: space-between;}
+    .faqA {padding-left: 10px;}
+    .faqTit{display: block; font-size: 30px; font-weight: 800;}
+    .faqSearchBox {text-indent: -30px;}
+    .faqSearch { 60%; margin: 0; border: 2px solid #333;  padding-left: 20px; line-height: 60px; height: 60px; width: 700px; margin-right: 120px;}
+    .faqSearchBtn {  width: 85px; height: 60px;  background-color: black; color:#fff; border-radius: 8px; display: flex; align-items: center; font-size: 20px; justify-content: center; background-image: none; top: 0;}
+    .faqSearchBtn::before {
+        content: "검색";
+        font-size: 17px;
+        }
+    /* .faqSearchBtn {width: 30px; height: 30px; right:20px; none;   color:#333;} */
+    .faqMenuBox {display:flex; flex-wrap: nowrap; margin: 0 20px 20px;}
+    .faqMenu {line-height:50px; height:50px; text-align: center; font-size: 15px; width: auto; padding: 0 20px;}
+    .faqPagerBox {display: flex; justify-content: center;}
+    /* .faqMenu:nth-child(3n) {
+        border-right: none; */
+    }
+
+
