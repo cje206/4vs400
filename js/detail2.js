@@ -3,27 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.book-content > span:nth-child(1)').addEventListener('click', function () {
         scrollToElement('.basic');
     });
-
     // 리뷰 버튼 클릭 시
     document.querySelector('.book-content > span:nth-child(2)').addEventListener('click', function () {
         scrollToElement('.review');
     });
-
     // 반품/교환 버튼 클릭 시
     document.querySelector('.book-content > span:nth-child(3)').addEventListener('click', function () {
         scrollToElement('.returntitle');
     });
-
     // 스크롤 이벤트
     window.addEventListener('scroll', function () {
         // 스크롤 위치에 따라 도서 정보, 리뷰, 반품/교환 버튼 스타일 변경
         handleScroll();
     });
-
     // 초기 스크롤 위치에 따른 초기 스타일 설정
     handleScroll();
 });
-
 function scrollToElement(selector) {
     const element = document.querySelector(selector);
     if (element) {
@@ -84,28 +79,11 @@ function setActiveButton(index) {
     });
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     // 각 버튼에 대한 클릭 이벤트 리스너 추가
-//     document.querySelectorAll('.reviewbtn button').forEach(function (button, index) {
-//         button.addEventListener('click', function () {
-//             toggleReviewContent(index + 1);
-//         });
-//     });
-// });
-
 // 리뷰 토글 1
 $('.btnToggle').on('click', function () {
     $(this).parent('.reviewbtn').siblings('.reviewContent').toggleClass('close');
     $(this).text() === '접기 -' ? $(this).text('더보기 +') : $(this).text('접기 -');
     console.log($(this).text());
-});
-
-// 각 버튼에 대한 이벤트 리스너 등록
-document.querySelectorAll('.btnToggle').forEach(function (button) {
-    button.addEventListener('click', function () {
-        var targetNumber = this.getAttribute('data-target');
-        toggleReview(targetNumber);
-    });
 });
 
 $(document).ready(function () {
