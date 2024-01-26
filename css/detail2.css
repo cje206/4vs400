@@ -236,7 +236,16 @@ footer {
         margin: 0 auto;
         width: 1200px;
     }
+    .basicfont {
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+    .basic > p {
+        font-size: 14px;
+        padding-bottom: 20px;
+    }
     .basicul li {
+        font-size: 14px;
         padding: 0;
         text-indent: 0;
     }
@@ -245,15 +254,32 @@ footer {
         margin: 0 auto;
         width: 1200px;
     }
+    .introfont {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .intro > p {
+        font-size: 14px;
+    }
     .index {
         padding: 20px 0;
         margin: 0 auto;
         width: 1200px;
     }
+    .indexfont {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .index > p {
+        font-size: 14px;
+    }
     .review {
         padding: 20px 0;
         margin: 0 auto;
         width: 1200px;
+    }
+    .review .reviewfont {
+        font-size: 16px;
     }
     .reviewBox {
         padding: 20px 0;
@@ -271,10 +297,22 @@ footer {
     }
     .reviewdate {
         order: 4;
+        font-size: 14px;
     }
     .reviewContent {
         width: 800px;
     }
+    .reviewContent > p {
+        font-size: 14px;
+    }
+    .reviewplus {
+        border: none;
+        margin-bottom: 50px;
+    }
+    .reviewbtn > button {
+        font-size: 14px;
+    }
+
     .returntitle {
         margin: 0 auto;
         padding: 20px 0;
@@ -284,6 +322,22 @@ footer {
         margin: 0 auto;
         padding: 20px 0;
         width: 1200px;
+    }
+    .returntitle {
+        font-size: 16px;
+    }
+    .returnfont {
+        font-size: 16px;
+    }
+    .return > p {
+        font-size: 14px;
+    }
+    .return2 > p,
+    .return3 > p,
+    .return4 > p,
+    .return5 > p {
+        text-indent: -12px;
+        padding-left: 12px;
     }
     .bottom1 {
         display: flex;

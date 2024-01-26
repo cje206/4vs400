@@ -7,6 +7,33 @@
 .pc {
     display: none;
 }
+.abBox {
+    cursor: pointer;
+}
+.arrL {
+    width: 40px;
+    height: 40px;
+    background: url('../img/bookArrDis.png') center/100%;
+    border-radius: 50%;
+    box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 50%;
+    transform: translateX(-580px) rotate(-180deg);
+    z-index: 998;
+    cursor: pointer;
+}
+.arrR {
+    width: 40px;
+    height: 40px;
+    background: url('../img/bookArrActive.png') center/100%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    transform: translateX(580px);
+    z-index: 998;
+    cursor: pointer;
+}
 
 /* header */
 header {
@@ -123,6 +150,23 @@ header {
     border-bottom: 1px solid #eee;
     padding: 0 20px;
     cursor: pointer;
+}
+
+/* container */
+.bookCat {
+    display: inline-block;
+    font-size: 10px;
+    background-color: #c8ebfb;
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+.bookTit {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.bookText {
+    font-size: 12px;
 }
 
 /* footer */
@@ -385,6 +429,20 @@ footer {
     }
     .moMenuBox {
         display: none;
+    }
+
+    /* container */
+    .bookCat {
+        width: fit-content;
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .bookTit {
+        font-size: 16px;
+    }
+    .bookText {
+        font-size: 14px;
     }
 
     /* footer */
