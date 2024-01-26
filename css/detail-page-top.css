@@ -1,7 +1,14 @@
 /* 모바일 버전 */
+.container {
+    margin-bottom: 70px;
+}
 /* 도서 이미지 영역 */
 .main {
-    margin: 20px;
+    margin: 0 20px 20px;
+}
+.mainBook img {
+    width: 100%;
+    height: auto;
 }
 
 /* 도서 상품 안내 영역 */
@@ -88,6 +95,7 @@
 }
 
 .pop_wrap {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -220,7 +228,7 @@ button.clicked {
 /* 오늘의 추천 영역 */
 
 .todayRecommend {
-    border-bottom: 50px solid #cacaca;
+    border-bottom: 10px solid #efefef;
 }
 
 .todayTitle1 {
@@ -235,6 +243,7 @@ button.clicked {
 
 .recommendMove {
     width: 100%;
+    margin-bottom: 15px;
     overflow-x: auto;
     scrollbar-width: none; /* Firefox에 대한 설정 */
 }
@@ -245,7 +254,7 @@ button.clicked {
 
 .recommendMoveList {
     display: flex;
-    margin: 0 15px;
+    padding: 0 10px;
 }
 
 .recommendMoveItem {
@@ -294,8 +303,11 @@ button.clicked {
 /* PC버전 */
 
 @media screen and (min-width: 1200px) {
+    .container {
+        margin-bottom: 130px;
+    }
     .main {
-        margin: 0 auto;
+        margin: 30px auto;
         width: 1200px;
         display: flex;
         flex-direction: row;
@@ -469,6 +481,8 @@ button.clicked {
         width: 15px;
         height: 15px;
         text-align: center;
+        font-size: 8px;
+        color: #cacaca;
         border-radius: 0;
         border: 1px solid;
     }
@@ -477,6 +491,8 @@ button.clicked {
         width: 15px;
         height: 15px;
         text-align: center;
+        font-size: 8px;
+        color: #cacaca;
         border-radius: 0;
         border: 1px solid;
     }

@@ -1,0 +1,444 @@
+.hide {
+    display: none;
+}
+.tb {
+    font-weight: 700;
+}
+.pc {
+    display: none;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    z-index: 999;
+}
+.headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.hLogo {
+    width: 60px;
+    height: 100%;
+    padding: 18px 10px;
+    background: #fff;
+}
+.hLogo img {
+    width: 40px;
+    height: auto;
+}
+
+.hIcons {
+    display: flex;
+}
+.hIcons .hIcon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.hSearch {
+    position: relative;
+    width: 100%;
+    min-width: 180px;
+    margin-right: 10px;
+}
+.hSearch input {
+    border: none;
+    background: #eee;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+.hSearchIcon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-40%);
+}
+
+.moMenuBox {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    background: #fff;
+    z-index: 999;
+}
+.moLogin {
+    height: 70px;
+    margin: 20px;
+    background: #eee;
+    border-radius: 10px;
+    line-height: 70px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.moMenuBtn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20px 20px 20px;
+}
+.moBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.moBtnText {
+    font-size: 12px;
+    text-align: center;
+}
+
+.mmlCategory {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    padding: 0 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.mmlList {
+    display: none;
+}
+.mmlSub {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    background: #eee;
+    padding: 15px 0 40px 0;
+}
+.flogo {
+    margin-bottom: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.fText {
+    margin: 0 20px 10px 20px;
+    display: none;
+}
+.fText span {
+    font-size: 10px;
+    color: #666;
+    display: inline-block;
+}
+.fText span:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 8px;
+    background: #999;
+    margin: 0 6px;
+}
+.fMenu {
+    margin: 0 16px 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: none;
+}
+.fMenu p {
+    color: #999;
+    margin: 4px;
+    font-size: 10px;
+    display: inline-block;
+}
+.fMenu p.tcbl {
+    color: #555;
+    font-weight: 500;
+}
+.fCopy {
+    color: #bbb;
+    font-size: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+.fTel {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.ftText {
+    color: #777;
+    font-size: 12px;
+}
+.fBtns {
+    display: flex;
+    justify-content: center;
+}
+.fBtn {
+    width: 135px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px 0 5px 40px;
+    font-size: 10px;
+    word-break: keep-all;
+    text-align: left;
+    background: url();
+}
+.fBtn.escrow {
+    margin-right: 10px;
+    background: #fff
+        url('https://image.aladin.co.kr/img/footer/footer_escrow.jpg') no-repeat
+        center left 10px / 24px 24px;
+}
+.fBtn.isms {
+    margin-right: 10px;
+    background: #fff
+        url('https://image.aladin.co.kr/img/footer/footer_isms.jpg') no-repeat
+        center left 10px / 24px 24px;
+}
+.pcFooter {
+    display: none;
+}
+
+/* pc */
+@media screen and (min-width: 1200px) {
+    .mo {
+        display: none;
+    }
+    .pc {
+        display: block;
+    }
+    /* header */
+    header {
+        top: -35px;
+        height: 115px;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+    }
+    .hMenuBg {
+        width: 100%;
+        background-color: #3b4a9f;
+        position: relative;
+    }
+    .hLogo {
+        height: auto;
+        width: fit-content;
+    }
+    .hLogo img {
+        width: 80px;
+    }
+    .hSearch {
+        width: 600px;
+        height: 50px;
+    }
+    .hSearch input {
+        border: 1px solid #a5a5a5;
+        background: #fff;
+        line-height: 50px;
+        height: 50px;
+        border-radius: 30px;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+    .hSearchIcon {
+        right: 20px;
+    }
+    .hSearchIcon svg {
+        width: 28px;
+        height: 28px;
+        filter: invert(26%) sepia(99%) saturate(554%) hue-rotate(196deg)
+            brightness(93%) contrast(92%);
+    }
+    .hPop {
+        width: fit-content;
+        height: 80px;
+    }
+    .hpSlide {
+        width: 200px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-height: 80px;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .hpBox {
+        position: absolute;
+        top: 115px;
+        right: 50%;
+        transform: translateX(600px);
+        background: #fff;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        padding: 30px;
+        display: none;
+    }
+    .hpTit {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .hpText {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        cursor: pointer;
+    }
+    .hpText:hover {
+        text-decoration: underline;
+    }
+    .hpText .rank {
+        color: #3b4a9f;
+    }
+    .hMenu {
+        display: flex;
+        width: 1200px;
+        height: 35px;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .hmCat {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .hmMy {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .hmc {
+        color: #fff;
+        padding: 0 10px;
+        line-height: 35px;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .hmc.active {
+        background-color: #fff;
+        color: #333;
+        font-weight: 700;
+    }
+    .hmc:hover {
+        font-weight: 700;
+    }
+    .hmmBtn {
+        color: #fff;
+        line-height: 35px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+    .hmmBtn:hover {
+        font-weight: 700;
+    }
+    .hmlList {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        display: flex;
+        background: #fff;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    .hmlBox {
+        padding: 20px;
+        width: 160px;
+        display: none;
+    }
+    .hmlSub {
+        padding: 5px 10px;
+        word-break: keep-all;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .hmlSub:hover {
+        text-decoration: underline;
+    }
+    .headerWrap {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        height: 80px;
+    }
+
+    .hIcons {
+        display: none;
+    }
+    .moMenuBox {
+        display: none;
+    }
+
+    /* footer */
+    .moFooter {
+        display: none;
+    }
+    .pcFooter {
+        display: flex;
+        width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .fLeft {
+        width: 200px;
+        padding: 10px 20px 10px 0;
+        border-right: 1px solid #ccc;
+        margin-right: 20px;
+    }
+    .fLogo {
+        font-size: 14px;
+        margin-bottom: 15px;
+        cursor: default;
+    }
+    .ftTit {
+        margin-bottom: 10px;
+    }
+    .fText {
+        display: block;
+    }
+    .fCenter {
+        width: 260px;
+        padding-right: 20px;
+        border-right: 1px solid #ccc;
+    }
+    .fMenu {
+        display: flex;
+        margin: 0;
+    }
+    .fMenu p {
+        width: 50%;
+        margin: 10px 0;
+    }
+    .fRight {
+        margin-left: 20px;
+        padding: 10px 0;
+    }
+    .fText {
+        margin: 0 0 15px 0;
+    }
+    .fBtns {
+        justify-content: left;
+        margin-bottom: 15px;
+    }
+    .fCopy {
+        border: none;
+    }
+}
