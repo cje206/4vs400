@@ -735,7 +735,6 @@ img {
     }
     .tabCont {
         display: flex;
-        justify-content: space-between;
         width: fit-content;
     }
     .tabContBox {
