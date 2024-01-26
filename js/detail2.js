@@ -96,16 +96,6 @@ function setActiveButton(index) {
         }
     });
 }
-document.addEventListener('DOMContentLoaded', function () {
-    // 각 버튼에 대한 클릭 이벤트 리스너 추가
-    document
-        .querySelectorAll('.reviewbtn button')
-        .forEach(function (button, index) {
-            button.addEventListener('click', function () {
-                toggleReviewContent(index + 1);
-            });
-        });
-});
 
 // 리뷰 토글 1
 $('.btnToggle').on('click', function () {
@@ -117,14 +107,6 @@ $('.btnToggle').on('click', function () {
         ? $(this).text('더보기 +')
         : $(this).text('접기 -');
     console.log($(this).text());
-});
-
-// 각 버튼에 대한 이벤트 리스너 등록
-document.querySelectorAll('.btnToggle').forEach(function (button) {
-    button.addEventListener('click', function () {
-        var targetNumber = this.getAttribute('data-target');
-        toggleReview(targetNumber);
-    });
 });
 
 $(document).ready(function () {
