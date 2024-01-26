@@ -212,10 +212,9 @@ button.clicked {
 /* 구매 버튼 */
 
 .salesAreabtn {
-    margin-right: 20px;
     display: none;
+    border-radius: 8px;
 }
-
 /* 광고 영역 */
 .ad {
     margin-top: 10px;
@@ -502,11 +501,32 @@ button.clicked {
     .salesAreabtn {
         display: inline;
         width: 100px;
-        height: 30px;
-        margin: 0px 20px 20px 0;
+        height: 40px;
+        margin: 0px 0 20px 0;
         border: 1px solid #d9d9d9;
         background-color: #d9d9d9;
         color: #333333;
+    }
+
+    .enterCart {
+        border: 1px solid #3b4a9f;
+        background: #3b4a9f;
+        color: #fff;
+    }
+    .enterBuyNow {
+        border: 1px solid #3b4a9f;
+        background-color: #fff;
+        color: #3b4a9f;
+    }
+    .enterPresent {
+        border: 1px solid #f21c8c;
+        color: #fff;
+        background: #f21c8c;
+    }
+    .enterSave {
+        border: 1px solid #f21c8c;
+        color: #f21c8c;
+        background: #fff;
     }
 
     /* 광고 배너 영역 */
