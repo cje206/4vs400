@@ -16,7 +16,11 @@ $(document).ready(function () {
         let ns = $(this).scrollTop();
         let wh = $(this).height();
         if (ns >= wh) {
-            $('.fixBtn').show();
+            if ($(window).width() >= 1200) {
+                $('.fixBtn').show();
+            } else {
+                $('.fixBtn').hide();
+            }
         } else if (ns < wh) {
             $('.fixBtn').hide();
         }
