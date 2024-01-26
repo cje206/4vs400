@@ -1,18 +1,3 @@
-.bookCat {
-    display: inline-block;
-    font-size: 10px;
-    background-color: #c8ebfb;
-    padding: 2px 8px;
-    border-radius: 6px;
-    margin-bottom: 6px;
-}
-.bookTit {
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-.bookText {
-    font-size: 12px;
-}
 img {
     width: 100%;
     height: 100%;
@@ -41,9 +26,6 @@ img {
 .fp {
     font-size: 12px;
     font-weight: 700;
-}
-.abBox {
-    cursor: pointer;
 }
 
 /* slide */
@@ -239,14 +221,56 @@ img {
     width: 100%;
 }
 .bestRank {
+    position: relative;
     font-size: 10px;
     color: #999;
 }
-
+.bestRank.up {
+    color: #df53538c;
+}
+.bestRank.up::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -14px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #df53538c;
+    border-top: 8px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+.bestRank.down {
+    color: #6e62e9ac;
+}
+.bestRank.down::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -14px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid #6e62e9ac;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+.bestRank.keep::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -14px;
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+    background: #ddd;
+}
 .bestBox.active {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 .bestBox.active .bestMain {
     margin-bottom: 10px;
@@ -633,42 +657,6 @@ img {
     .fp {
         font-size: 16px;
     }
-    .bookCat {
-        width: fit-content;
-        text-align: center;
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-    .bookTit {
-        font-size: 16px;
-    }
-    .bookText {
-        font-size: 14px;
-    }
-    .arrL {
-        width: 40px;
-        height: 40px;
-        background: url('../img/bookArrDis.png') center/100%;
-        border-radius: 50%;
-        box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.3);
-        position: absolute;
-        right: 50%;
-        transform: translateX(-580px) rotate(-180deg);
-        z-index: 998;
-        cursor: pointer;
-    }
-    .arrR {
-        width: 40px;
-        height: 40px;
-        background: url('../img/bookArrActive.png') center/100%;
-        border-radius: 50%;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-        position: absolute;
-        left: 50%;
-        transform: translateX(580px);
-        z-index: 998;
-        cursor: pointer;
-    }
 
     /* slide */
     .slide {
@@ -820,6 +808,15 @@ img {
     .bestTit,
     .bestRank {
         font-size: 16px;
+    }
+    .bestRank.up::before {
+        top: 1px;
+    }
+    .bestRank.down::before {
+        top: 10px;
+    }
+    .bestRank.keep::before {
+        top: 12px;
     }
     .bestAut {
         font-size: 14px;

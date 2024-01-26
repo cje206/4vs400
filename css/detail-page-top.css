@@ -6,35 +6,26 @@
 .main {
     margin: 0 20px 20px;
 }
+.mainBook {
+    margin-bottom: 15px;
+}
 .mainBook img {
     width: 100%;
     height: auto;
 }
 
 /* 도서 상품 안내 영역 */
-.mainCategory {
-    display: inline-block;
-    background: #d9d9d9;
-    text-align: center;
-    font-size: 10px;
-    color: #333333;
-    border-radius: 15px;
-    padding: 1px 7px 2px 7px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
 .mainTitle {
     margin-bottom: 5px;
     color: #333333;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .bookContent > p {
     margin-bottom: 5px;
     color: #9e9e9e;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 /* 가격 안내 영역 */
@@ -51,7 +42,7 @@
 
 .sale {
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -61,13 +52,13 @@
 
 .originPrice {
     color: rgb(202, 202, 202);
-    font-size: 8px;
+    font-size: 12px;
     text-decoration: line-through;
 }
 
 .salePrice {
     color: #333333;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 /* 마일리지, 배송 안내 영역 */
@@ -162,7 +153,6 @@ h4 {
 }
 
 .ytz_text {
-    font-size: 12px;
     font-weight: bold;
     color: #333333;
 }
@@ -170,6 +160,7 @@ h4 {
 /* 별점 및 리뷰 안내 영역 */
 
 .reviewList {
+    margin-top: 8px;
     display: flex;
     align-items: center; /* 세로로 가운데 정렬 */
     height: 20px;
@@ -212,10 +203,9 @@ button.clicked {
 /* 구매 버튼 */
 
 .salesAreabtn {
-    margin-right: 20px;
     display: none;
+    border-radius: 8px;
 }
-
 /* 광고 영역 */
 .ad {
     margin-top: 10px;
@@ -255,6 +245,7 @@ button.clicked {
 .recommendMoveList {
     display: flex;
     padding: 0 10px;
+    width: fit-content;
 }
 
 .recommendMoveItem {
@@ -262,26 +253,12 @@ button.clicked {
     width: 100%;
 }
 
-.moveCategory {
-    width: fit-content;
-    background: #d9d9d9;
-    text-align: center;
-    font-size: 8px;
-    color: #333333;
-    border-radius: 12px;
-    padding: 1px 7px 2px 7px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+.moveBI {
+    margin-bottom: 15px;
 }
 
-.moveTitle {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.recommendMoveInfo {
-    font-size: 10px;
-    width: 130px;
+.bookText {
+    margin-bottom: 8px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -328,11 +305,6 @@ button.clicked {
     .bookContent > p {
         margin-bottom: 10px;
         color: #9e9e9e;
-        font-size: 12px;
-    }
-
-    .mainCategory {
-        margin: 0 0 10px 0;
         font-size: 12px;
     }
 
@@ -500,13 +472,37 @@ button.clicked {
     /* 구매 버튼 */
 
     .salesAreabtn {
-        display: inline;
+        display: inline-block;
+        text-align: center;
+        line-height: 38px;
+        font-weight: 500;
         width: 100px;
-        height: 30px;
-        margin: 0px 20px 20px 0;
+        height: 40px;
+        margin: 0px 6px 20px 0;
         border: 1px solid #d9d9d9;
         background-color: #d9d9d9;
         color: #333333;
+    }
+
+    .enterCart {
+        border: 1px solid #3b4a9f;
+        background: #3b4a9f;
+        color: #fff;
+    }
+    .enterBuyNow {
+        border: 1px solid #3b4a9f;
+        background-color: #fff;
+        color: #3b4a9f;
+    }
+    .enterPresent {
+        border: 1px solid #f21c8c;
+        color: #fff;
+        background: #f21c8c;
+    }
+    .enterSave {
+        border: 1px solid #f21c8c;
+        color: #f21c8c;
+        background: #fff;
     }
 
     /* 광고 배너 영역 */
@@ -537,9 +533,10 @@ button.clicked {
 
     /* 오늘의 추천 영역 */
     .todayRecommend {
-        margin: 0 auto;
+        margin: 0 auto 50px;
         width: 1200px;
         border-bottom: none;
+        position: relative;
     }
 
     .todayTitle1 {
@@ -552,13 +549,25 @@ button.clicked {
         font-weight: bold;
         margin: 0 0 20px 0;
     }
+    .recommendMove {
+        width: 1200px;
+    }
 
     .recommendMoveList {
         margin: 0;
+        padding: 0;
     }
 
     .recommendMoveItem {
-        margin-right: 50px;
+        width: 200px;
+        margin: 0 50px 0 0;
+    }
+    .recommendMoveItem:last-child {
+        margin: 0;
+    }
+    .trArrL,
+    .trArrR {
+        top: 170px;
     }
 
     .moveBI {
