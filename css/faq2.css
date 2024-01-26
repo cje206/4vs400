@@ -1,8 +1,16 @@
+.hSearch.mo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 25px;
+    text-align: center;
+}
+.faqContent {
+    margin: 20px 0 70px;
+}
 .faqQst {
-    margin:0 20px 20px;
+    margin: 0 20px 20px;
     position: relative;
 }
-
 .faqTit {
     display: none;
 }
@@ -11,14 +19,13 @@
     flex-wrap: nowrap;
     width: 10%x;
     /* width:750px; */
-    
 }
 .faqSearch {
     position: relative;
     border: 1px solid #ddd;
     font-size: 17px;
     border-radius: 10px;
-    padding-left: 0px;
+    padding-left: 10px;
     line-height: 50px;
     height: 50px;
     width: 200%;
@@ -28,146 +35,175 @@ span {
 }
 .faqSearchBtn {
     position: absolute;
-    width: 33px ;
-    height: 33px ;
-    top: 8px;
+    width: 22px;
+    height: 22px;
+    top: 50%;
     right: 15px;
-    background:url('/img/search.png') 0 0 no-repeat;
+    background: url('/img/search.png') 0 0 no-repeat;
     background-size: contain;
     background-position: right;
     border: none;
-    background-color: transparent; 
-
+    background-color: transparent;
+    transform: translateY(-50%);
 }
 .faqMenuBox {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    margin:0 20px 20px;
-
+    border-bottom: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    margin: 0 20px;
 }
-.faqMenu{
+.faqMenu {
     line-height: 40px;
     height: 40px;
     width: 33.3%;
     text-align: center;
-    border-right: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-    font-size: 17px;
+    border-right: 1px solid #efefef;
+    border-top: 1px solid #efefef;
 }
 .faqMenu.active {
-    background-color: #ddd;
+    background-color: #3b4a9f;
+    color: #fff;
+    font-weight: 500;
 }
-
-/* Qna */
 .faqQnaBox {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .faqQna {
-    
-    
+    display: none;
+}
+.faqQna.active {
+    display: block;
 }
 .faqQ {
-    display: flex;
-    padding: 15px 20px 15px 43px;
-    border-bottom: 1px solid #ddd;
-    text-indent: -20px;
+    padding: 15px 20px 15px 52px;
+    border-bottom: 1px solid #efefef;
+    text-indent: -42px;
 }
 .qst {
     font-weight: 700;
     font-size: 16px;
-    color: #1d45d4;
+    color: #3b4a9f;
 }
-.qstCont {
-    flex-wrap: nowrap;
-}
-.faqA { 
-    padding: 15px 20px 15px 43px;
+.faqA {
+    padding: 15px 20px 15px 50px;
     border-bottom: 1px solid #ddd;
-    background-color: #ddd;
+    background-color: #efefef;
     display: none;
-    text-indent: -20px;
-    padding-left: 10px;
-   
+    text-indent: -40px;
 }
-
 .ans {
     font-weight: 700;
     font-size: 16px;
-    color: #1d45d4;
-    /* padding-left: 35px; */
+    color: #f21c8c;
 }
-
-
-
-
 /* 아코디언 */
 .faqQnaBox .faqA {
     display: none;
 }
-
 .faqQnaBox .faqQ {
     cursor: pointer;
 }
-/* .faqQnaBox .faqQ:hover {
-    background-color: #ddd;
-  } */
-  
-  .faqQnaBox .faqQ.active {
+.faqQnaBox .faqQ.active {
     font-weight: bold;
-  }
-  /* 페이저  */
-  .faqPagerBox {
+}
+/* 페이저  */
+.faqPagerBox {
     display: flex;
     justify-content: center;
-  }
-.faqPagerBox a {
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
 }
-.faqPagerBox a: hover:not(.active) {
-    background-color: #ddd
+.faqPrev {
+    color: #ddd;
 }
-.faqPager a{
+.faqPager {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    margin: 0 20px;
-    width: 20px;
-    height: 20px;
+    margin: 0 10px;
     font-size: 12px;
+    width: 20px;
+    line-height: 20px;
     color: #777;
     border: 1px solid #ddd;
     text-align: center;
+    transition: background-color 0.3s;
+}
+.faqNext {
+    color: #777;
 }
 .faqPager.active {
     border: none;
-    background-color: #333;
+    background-color: #3b4a9f;
     color: #fff;
-
 }
-
 /* pc  */
-@media screen and (min-width: 1200px){
-    .faqContent{width: 1200px; margin: auto;}
-    .faqQst{display: flex; justify-content: space-between;}
-    .faqA {padding-left: 10px;}
-    .faqTit{display: block; font-size: 30px; font-weight: 800;}
-    .faqSearchBox {text-indent: -30px;}
-    .faqSearch { 60%; margin: 0; border: 2px solid #333;  padding-left: 20px; line-height: 60px; height: 60px; width: 700px; margin-right: 120px;}
-    .faqSearchBtn {  width: 85px; height: 60px;  background-color: black; color:#fff; border-radius: 8px; display: flex; align-items: center; font-size: 20px; justify-content: center; background-image: none; top: 0;}
-    .faqSearchBtn::before {
-        content: "검색";
-        font-size: 17px;
-        }
-    /* .faqSearchBtn {width: 30px; height: 30px; right:20px; none;   color:#333;} */
-    .faqMenuBox {display:flex; flex-wrap: nowrap; margin: 0 20px 20px;}
-    .faqMenu {line-height:50px; height:50px; text-align: center; font-size: 15px; width: auto; padding: 0 20px;}
-    .faqPagerBox {display: flex; justify-content: center;}
-    /* .faqMenu:nth-child(3n) {
-        border-right: none; */
+@media screen and (min-width: 1200px) {
+    .faqContent {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 30px 0 130px;
     }
-
-
+    .faqQst {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 30px;
+    }
+    .faqA {
+        /* padding-left: 10px; */
+    }
+    .faqTit {
+        display: block;
+        font-size: 24px;
+        font-weight: 800;
+    }
+    .faqSearch {
+        width: 60%;
+        border: 1px solid #3b4a9f;
+        padding-left: 10px;
+        line-height: 45px;
+        height: 45px;
+        width: 400px;
+        font-size: 16px;
+        border-radius: 8px 0 0 8px;
+    }
+    .faqSearchBtn {
+        position: relative;
+        width: 60px;
+        height: 45px;
+        background-color: #3b4a9f;
+        color: #fff;
+        border-radius: 0 8px 8px 0;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        justify-content: center;
+        background-image: none;
+        top: auto;
+        right: auto;
+        transform: translateY(0);
+    }
+    .faqSearchBtn::before {
+        content: '검색';
+        font-size: 16px;
+    }
+    /* .faqSearchBtn {width: 30px; height: 30px; right:20px; none;   color:#333;} */
+    .faqMenuBox {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+    .faqMenu {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 15px;
+        width: auto;
+        padding: 0 20px;
+    }
+    .faqPagerBox {
+        display: flex;
+        justify-content: center;
+    }
+    /* .faqMenu:nth-child(3n) {
+      border-right: none; */
+}
