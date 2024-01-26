@@ -456,7 +456,8 @@ button.clicked {
         font-size: 8px;
         color: #cacaca;
         border-radius: 0;
-        border: 1px solid;
+        border: 1px solid #cacaca;
+        cursor: pointer;
     }
 
     .minus {
@@ -466,7 +467,8 @@ button.clicked {
         font-size: 8px;
         color: #cacaca;
         border-radius: 0;
-        border: 1px solid;
+        border: 1px solid #cacaca;
+        cursor: pointer;
     }
 
     /* 구매 버튼 */
@@ -478,10 +480,11 @@ button.clicked {
         font-weight: 500;
         width: 100px;
         height: 40px;
-        margin: 0px 6px 20px 0;
+        margin: 0px 0px 20px 0;
         border: 1px solid #d9d9d9;
         background-color: #d9d9d9;
         color: #333333;
+        cursor: pointer;
     }
 
     .enterCart {

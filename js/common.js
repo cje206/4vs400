@@ -10,6 +10,17 @@ $(document).ready(function () {
         let hpt = $(`.hpText:nth-child(${hpi})`).text();
         $('.hpSlide').text(hpt);
     }
+
+    // pc화면 오른쪽 고정 버튼
+    $(window).on('scroll', function () {
+        let ns = $(this).scrollTop();
+        let wh = $(this).height();
+        if (ns >= wh) {
+            $('.fixBtn').show();
+        } else if (ns < wh) {
+            $('.fixBtn').hide();
+        }
+    });
 });
 
 // 모바일 메뉴
@@ -94,8 +105,6 @@ $('.arrL').on('click', function () {
         .stop()
         .animate({ scrollLeft: nowScrollLeft - swipeWidth });
 
-    console.log(nowScrollLeft, maxLeft, swipeWidth);
-
     if (nowScrollLeft === swipeWidth) {
         $(this).css('background', "url('../img/bookArrDis.png') center/100%");
     } else if (nowScrollLeft === maxLeft) {
@@ -144,8 +153,6 @@ $('.arrR').on('click', function () {
         .stop()
         .animate({ scrollLeft: nowScrollLeft + swipeWidth });
 
-    console.log(nowScrollLeft, maxLeft, swipeWidth);
-
     if (nowScrollLeft === maxLeft - swipeWidth) {
         $(this).css('background', "url('../img/bookArrDis.png') center/100%");
     } else if (nowScrollLeft === 0) {
@@ -158,6 +165,11 @@ $('.arrR').on('click', function () {
             "url('../img/bookArrActive.png') center/100%"
         );
     }
+});
+
+// 상단으로 가기 버튼
+$('.goTop').on('click', function () {
+    $('html').stop().animate({ scrollTop: 0 }, 500);
 });
 
 // 모바일 푸터 토글

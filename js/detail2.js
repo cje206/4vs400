@@ -106,7 +106,6 @@ $('.btnToggle').on('click', function () {
     $(this).text() === '접기 -'
         ? $(this).text('더보기 +')
         : $(this).text('접기 -');
-    console.log($(this).text());
 });
 
 $(document).ready(function () {
@@ -132,7 +131,6 @@ $(document).ready(function () {
     function toComma(number) {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
-    console.log(toComma(100000));
 
     // 책 가격 변수
     let bookPrice = 17500;

@@ -117,7 +117,6 @@ $('.tabContWrap').on('touchstart', function (e) {
 $('.tabContWrap').on('touchend', function (e) {
     atl = e.changedTouches[0].screenX;
     let nowBox = $('.tabContBox.active').index();
-    console.log(nowBox, btl, atl, tablength);
     if (screenWidth < 1200) {
         if (btl < atl) {
             // 이전으로 슬라이드

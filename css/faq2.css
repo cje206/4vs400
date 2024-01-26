@@ -60,6 +60,7 @@
     text-align: center;
     border-right: 1px solid #efefef;
     border-top: 1px solid #efefef;
+    cursor: pointer;
 }
 .faqMenu.active {
     background-color: #3b4a9f;
