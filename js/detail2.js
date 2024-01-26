@@ -34,10 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
 function scrollToElement(selector) {
     const element = document.querySelector(selector);
     if (element) {
+        let scrollOffset = window.innerWidth >= 1200 ? 80 : 60; // PC 버전일 때 80px, 그 외에는 60px
         window.scrollTo({
             top:
                 element.offsetTop -
-                document.querySelector('.book-content').offsetHeight,
+                document.querySelector('.book-content').offsetHeight -
+                scrollOffset,
             behavior: 'smooth',
         });
     }
@@ -55,23 +57,27 @@ function handleScroll() {
     const returnOffset =
         document.querySelector('.returntitle').offsetTop -
         document.querySelector('.book-content').offsetHeight;
-
-    // 도서 정보 버튼 스타일 변경
-    if (scrollPosition >= basicOffset && scrollPosition < reviewOffset) {
-        setActiveButton(1);
-    }
-
-    // 리뷰 버튼 스타일 변경
-    else if (scrollPosition >= reviewOffset && scrollPosition < returnOffset) {
-        setActiveButton(2);
-    }
-
-    // 반품/교환 버튼 스타일 변경
-    else if (scrollPosition >= returnOffset) {
-        setActiveButton(3);
+    // 버튼 스타일 변경
+    if (scrollPosition >= returnOffset - 60) {
+        setActiveButton(3); // 반품/교환 버튼
+    } else if (scrollPosition >= reviewOffset - 60) {
+        setActiveButton(2); // 리뷰 버튼
+    } else if (scrollPosition >= basicOffset - 60) {
+        setActiveButton(1); // 도서 정보 버튼
     } else {
-        // 다른 부분 스크롤 시 모든 버튼 스타일 초기화
-        setActiveButton(0);
+        setActiveButton(0); // 스크롤된 부분이 아닐 때
+    }
+    //pc 버전
+    if (window.innerWidth >= 1200) {
+        if (scrollPosition >= returnOffset - 80) {
+            setActiveButton(3); // 반품/교환 버튼
+        } else if (scrollPosition >= reviewOffset - 80) {
+            setActiveButton(2); // 리뷰 버튼
+        } else if (scrollPosition >= basicOffset - 80) {
+            setActiveButton(1); // 도서 정보 버튼
+        } else {
+            setActiveButton(0); // 스크롤된 부분이 아닐 때
+        }
     }
 }
 
@@ -112,30 +118,6 @@ $('.btnToggle').on('click', function () {
         : $(this).text('접기 -');
     console.log($(this).text());
 });
-
-// 리뷰 토글 2
-// function toggleReview(btnNumber) {
-//     var hiddenSpan = document.querySelector(
-//         '.reviewcontent .hidden' + btnNumber
-//     );
-//     var btnText = document.querySelector(
-//         '.btnToggle[data-target="' + btnNumber + '"]'
-//     );
-//     var reviewHead = document.getElementById('review' + btnNumber + 'head');
-
-//     if (
-//         hiddenSpan.style.display === 'none' ||
-//         hiddenSpan.style.display === ''
-//     ) {
-//         hiddenSpan.style.display = 'inline'; // Change 'inline' to 'block' if needed
-//         btnText.innerHTML = '접기 -';
-//     } else {
-//         hiddenSpan.style.display = 'none';
-//         btnText.innerHTML = '더보기 +';
-//         // Scroll to reviewHead
-//         reviewHead.scrollIntoView({ behavior: 'smooth' });
-//     }
-// }
 
 // 각 버튼에 대한 이벤트 리스너 등록
 document.querySelectorAll('.btnToggle').forEach(function (button) {

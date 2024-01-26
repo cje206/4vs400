@@ -239,14 +239,56 @@ img {
     width: 100%;
 }
 .bestRank {
+    position: relative;
     font-size: 10px;
     color: #999;
 }
-
+.bestRank.up {
+    color: #df53538c;
+}
+.bestRank.up::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -14px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid #df53538c;
+    border-top: 8px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+.bestRank.down {
+    color: #6e62e9ac;
+}
+.bestRank.down::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -14px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid #6e62e9ac;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+.bestRank.keep::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -14px;
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+    background: #ddd;
+}
 .bestBox.active {
     background: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 .bestBox.active .bestMain {
     margin-bottom: 10px;
@@ -820,6 +862,15 @@ img {
     .bestTit,
     .bestRank {
         font-size: 16px;
+    }
+    .bestRank.up::before {
+        top: 1px;
+    }
+    .bestRank.down::before {
+        top: 10px;
+    }
+    .bestRank.keep::before {
+        top: 12px;
     }
     .bestAut {
         font-size: 14px;
