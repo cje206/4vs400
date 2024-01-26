@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>상세 페이지</title>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/detail-page-top.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <!-- 도서 이미지 영역 -->
+            <div class="mainBook">
+                <img src="../img/도시와 그 불확실한 벽.jpg" alt="오류입니다." width="100%" />
+            </div>
+            <!-- 도서 상품 안내 영역 -->
+            <div class="bookDetail">
+                <div class="bookContent">
+                    <span class="mainCategory">소설/일본문학</span>
+                    <div class="mainTitle">도시와 그 불확실한 벽</div>
+                    <p class="infoBook">
+                        무라카미 하루키 (지은이), 홍은주 (옮긴 이) / 문학동네 / 2023-09-06 / 원제 : 街とその不確かな壁
+                    </p>
+                </div>
+                <!-- 가격 안내 영역 -->
+                <div class="infoPrice">
+                    <span class="price">금액</span>
+                    <span class="sale">10%</span>
+                    <span class="empty"> </span>
+                    <span class="originPrice">19,500원</span>
+                    <span class="salePrice">17,500원</span>
+                </div>
+                <div class="infoMD">
+                    <!-- 마일리지 안내 영역 -->
+                    <ul class="infoList1">
+                        <li class="mileage">
+                            <div class="listTilte">마일리지</div>
+                            <div class="listContent mileList1">970원 (5%) + 멤버십 (3~1%)</div>
+                            <div class="listContent mileList2">+ 5만원이상 구매시 2,000원</div>
+                            <a href="#pop_info_1" class="btn_open"
+                                ><img src="../img/m_btn_down.gif" alt="dowm_btn" width="15px"
+                            /></a>
+                            <!-- 마일리지 안내 팝업 -->
+                            <div id="pop_info_1" class="pop_wrap" style="display: none">
+                                <div class="pop_inner">
+                                    <p class="dsc">
+                                        <h4>마일리지 적립</h4>
+                                        <ul class="infoMil">
+                                            <li>적립 예상 마일리지는 현금성 결제 수단을 사용시 적립됩니다.</li>
+                                            <li>쿠폰, 적립금과 같은 비현금성 결제 수단을 이용할 경우 사용액의 비율만큼 마일리지 적립이 제외됩니다.</li>
+                                        </ul>
+                                    </p>
+                                    <button type="button_close" class="btn_close">확인했어요</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 배송 안내 영역 -->
+                    <ul class="infoList2">
+                        <li class="delivery">
+                            <div class="listTilte">배송</div>
+                            <div class="listContent">무료</div>
+                        </li>
+                        <li>
+                            <span class="ytz">양탄자배송</span>
+                            <br />
+                            <div>오후 1시까지 주문하면 밤 11시 <span class="ytz_text">잠들기전 배송</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reviewList">
+                    <!-- 별점 및 리뷰 안내 영역 -->
+                    <img src="../img/icon_star9.png" alt="별점9" width="90px" />
+                    <span class="score">(9.0)</span>
+                    <span class="empty"> </span>
+                    <span class="mainReview">리뷰 (141)</span>
+                </div>
+                <div class="reviewButton">
+                    <button type="button" class="buttonTop"><img src="../img/location.png" alt="location" /> 매장 재고 관리</button>
+                </div>
+                <!-- 장바구니 수량 영역 -->
+                <div class="quantityCount">
+
+                    <span class="quantity">수량</span>
+                    <span class="empty"></span>
+                    <span id="quantity">0</span>
+                    <div class="arrow">
+                        <button type ="button" class="plus" onclick="plus();" style="font-size: 8px; color: #CACACA;">ᐱ</button>
+                    <button type="button" class="minus" onclick="minus();" style="font-size: 8px; color: #CACACA;">ᐯ</button>
+                    </div>
+                </div>
+                <!-- 구매 버튼 -->
+                <div class="salesArea">
+                    <button type="button" class="salesAreabtn enterCart">장바구니</button>
+                    <button type="button" class="salesAreabtn enterBuyNow">바로구매</button>
+                    <button type="button" class="salesAreabtn enterPresent">선물하기</button>
+                    <button type="button" class="salesAreabtn enterSave">보관함</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 광고 배너 영역 -->
+        <div class="ad">
+            <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332031663&start=ADleft">
+                <img class="adLeft" src="../img/ad1.jpg" alt="ad_left" width="100%" />
+            </a>
+            <a href="https://www.aladin.co.kr/events/wevent.aspx?EventId=259518&start=ADright">
+                <img class="adRight" src="../img/ad2.jpg" alt="ad_right" width="320px" />
+            </a>
+        </div>
+        <!-- 오늘의 추천 영역 -->
+        <div class="todayRecommend">
+            <div class="todayTitle1">오늘의 추천</div>
+            <div class="todayTitle2">연간 검색</div>
+            <div class="recommendMove">
+                <ul class="recommendMoveList">
+                    <li class="recommendMoveItem">
+                        <div class="todayRecommend1">
+                            <img class="moveBI" src="../img/라디오 체조.jpg" alt="오류입니다." width="130px" height="200px" />
+                            <div class="moveCategory">소설/일본문학</div>
+                            <div class="moveTitle">라디오 체조</div>
+                            <div class="recommendMoveInfo">
+                                &#60;공중그네&#62;의 이상하고 유쾌한 정신과 의사 이라부가 17년 만에 돌아왔다.
+                            </div>
+                            <div class="moveReviewList">
+                                <img src="../img/icon_star10.png" alt="별점10" width="70px" />
+                                <span class="empty"> </span>
+                                <span class="moveScore">(9.6)</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="recommendMoveItem">
+                        <div class="todayRecommend2">
+                            <img class="moveBI" src="../img/역행자.jpg" alt="오류입니다." width="130px" height="200px" />
+                            <br />
+                            <div class="moveCategory">자기계발/성공학</div>
+                            <div class="moveTitle">역행자</div>
+                            <div class="recommendMoveInfo">
+                                운명과 본능의 지배에서 벗어나 경제적 자유와 행복을 쟁취하는 라이프해킹의 비밀을 담은 책
+                            </div>
+                            <div class="moveReviewList">
+                                <img src="../img/icon_star7.png" alt="별점7" width="70px" />
+                                <span class="empty"></span>
+                                <span class="moveScore">(6.9)</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="recommendMoveItem">
+                        <div class="todayRecommend3">
+                            <img class="moveBI" src="../img/돌파매매 전략.jpg" alt="오류입니다." width="130px" height="200px" />
+                            <div class="moveCategory">경제경영/주식·펀드</div>
+                            <div class="moveTitle">돌파매매 전략</div>
+                            <div class="recommendMoveInfo">
+                                니콜라스 다바스, 윌리엄 오닐, 마크 미너비니, 데이비드 라이언, 댄 쟁거 등 전설적인
+                                트레이더들이 공통적으로 사용한 전략인 돌파매매 기법을 다룬 책이다.
+                            </div>
+                            <div class="moveReviewList">
+                                <img src="../img/icon_star7.png" alt="별점7" width="70px" />
+                                <span class="empty"></span>
+                                <span class="moveScore">(7.2)</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="recommendMoveItem">
+                        <div class="todayRecommend4">
+                            <img class="moveBI" src="../img/세상 끝의 살인.jpg" alt="오류입니다." width="130px" height="200px" />
+                            <div class="moveCategory">소설/일본문학</div>
+                            <div class="moveTitle">세상 끝의 살인</div>
+                            <div class="recommendMoveInfo">
+                                "2025년 3월 7일, 소행성이 지구에 충돌할 것입니다." 지구가 멸망하기까지 남은 시간이 단 두
+                                달이라면 무엇을 할 것인가.
+                            </div>
+                            <div class="moveReviewList">
+                                <img src="../img/icon_star10.png" alt="별점10" width="70px" />
+                                <span class="empty"></span>
+                                <span class="moveScore">(9.7)</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="recommendMoveItem">
+                        <div class="todayRecommend5">
+                            <img class="moveBI" src="../img/퓨처 셀프.jpg" alt="오류입니다." width="130px" height="200px" />
+                            <div class="moveCategory">자기계발/성공학</div>
+                            <div class="moveTitle">퓨처 셀프</div>
+                            <div class="recommendMoveInfo">
+                                살 날이 얼마 남지 않은 ‘미래의 내’가 현재로 시간 여행을 왔다고 상상해보자.
+                            </div>
+                            <div class="moveReviewList">
+                                <img src="../img/icon_star8.png" alt="별점8" width="70px" />
+                                <span class="empty"></span>
+                                <span class="moveScore">(7.6)</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="../js/detail-page-top.js"></script>
+    </body>
+</html>
