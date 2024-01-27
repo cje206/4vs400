@@ -4,7 +4,7 @@ let screenWidth = $(window).width();
 // 슬라이드 변수
 let now = 0;
 let slideWidth = $('.slideImg').width();
-let slideImgs = $('.slideBox').width() / slideWidth;
+let slideImgs = Math.round($('.slideBox').width() / slideWidth);
 
 // 탭영역 변수
 let btl = 0;
